@@ -536,6 +536,17 @@ h3 {
     white-space: nowrap;
 }
 
+#why-us .right{
+    position: relative;
+}
+
+#why-us .abs-img{
+    position: absolute;
+    top: -85%;
+    left: 5%;
+    z-index: -1;
+}
+
 
 /* WHY US */
 

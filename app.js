@@ -23,20 +23,29 @@ hamburger.addEventListener('click', () => {
 
 
 // MAGNETIC BUTTONS
-const btns = document.querySelectorAll(".btn");
+const cursor = document.querySelector('.cursor')
+const btns = document.querySelectorAll('.btn')
 
-btns.forEach((btn) => {
-  btn.addEventListener("mousemove", function(e){
-    const position = btn.getBoundingClientRect();
-    const x = e.pageX - position.left - position.width / 2;
-    const y = e.pageY - position.top - position.height / 2;
+btns.forEach(el => el.addEventListener('mousemove', function(e) {
+    cursor.classList.add('active')
+    const pos = this.getBoundingClientRect()
+    const mx = e.clientX - pos.left - pos.width/2
+    const my = e.clientY - pos.top - pos.height/2
+    
+    this.style.transform = 'translate('+ mx * 0.1 +'px, '+ my * 0.2 +'px)'
+    this.style.transform += 'rotate3d('+ mx * -0.1 +', '+ my * -0.2 +', 0, 12deg)'
+    this.children[0].style.transform = 'translate('+ mx * 0.025 +'px, '+ my * 0.075 +'px)'
+}))
 
-    btn.children[0].style.transform = "translate(" + x * 0.3 + "px, " + y * 0.5 + "px)";
-  });
-});
+btns.forEach(el => el.addEventListener('mouseleave', function() {
+    cursor.classList.remove('active')
+    this.style.transform = 'translate3d(0px, 0px, 0px)'
+    this.style.transform += 'rotate3d(0, 0, 0, 0deg)'
+    this.children[0].style.transform = 'translate3d(0px, 0px, 0px)'
+}))
 
-btns.forEach((btn) => {
-  btn.addEventListener("mouseout", function(e){
-    btn.children[0].style.transform = "translate(0px, 0px)";
-  });
-});
+// --- CURSOR
+document.addEventListener('mousemove', function(e) {
+    cursor.style.left = (e.pageX - 25) + 'px'
+    cursor.style.top = (e.pageY - 25) + 'px'
+})

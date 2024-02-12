@@ -185,6 +185,9 @@ input[type=number] {
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     text-align: center;
     padding: 1.7rem 4rem;
@@ -192,6 +195,20 @@ input[type=number] {
     background: var(--primary-color);
     font-size: 2rem;
     border-radius: 100vh;
+    transition: transform 0.1s linear, color 0.1s linear, background 0.15s linear;
+}
+.btn span {
+    --distance: 3em;
+    position: relative;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0);
+    text-shadow: 0 0 var(--black-color), 0 var(--distance) var(--black-color);
+    overflow: hidden;
+    transition: .2s;
+    padding: 0 0.1em;
+}
+.btn:hover span {
+    text-shadow: 0 calc(var(--distance) * -1) var(--black-color), 0 0 var(--black-color);
 }
 
 .btn.btn-secondary {
@@ -199,6 +216,12 @@ input[type=number] {
     color: var(--white-color);
     background: transparent;
     border: 1px solid var(--gray-color);
+}
+.btn.btn-secondary span {
+    text-shadow: 0 0 var(--white-color), 0 var(--distance) var(--white-color);
+}
+.btn.btn-secondary:hover span {
+    text-shadow: 0 calc(var(--distance) * -1) var(--white-color), 0 0 var(--white-color);
 }
 
 h1 {
@@ -232,6 +255,31 @@ h3 {
 /* UTILITIES */
 
 
+
+
+
+/* CURSOR */
+.cursor {
+    position: fixed;
+    top: -50px;
+    z-index: 99;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: none;
+    border: solid 2px #c3c8de;
+    pointer-events: none;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+  
+.cursor.active {
+    mix-blend-mode: hue;
+    transform: scale(1.5);
+    cursor: none;
+    background: #fff;
+    border-color: #fff;
+}
+/* CURSOR */
 
 
 

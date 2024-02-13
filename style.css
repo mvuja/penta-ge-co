@@ -260,6 +260,7 @@ h3 {
 
 /* CURSOR */
 .cursor {
+    display: none;
     position: fixed;
     top: -50px;
     z-index: 99;
@@ -276,8 +277,8 @@ h3 {
     mix-blend-mode: hue;
     transform: scale(1.5);
     cursor: none;
-    background: #fff;
-    border-color: #fff;
+    background: var(--white-color);
+    border-color: var(--white-color);
 }
 /* CURSOR */
 
@@ -289,17 +290,19 @@ h3 {
 
 .nav-header {
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 1000;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    background-color: var(--black-color);
-    transition: padding .2s ease;
+    background-color: rgba(18, 18, 18, .8);
+    backdrop-filter: blur(2rem);
+    transition: padding .2s ease, top .2s ease;
 }
 
 .nav-header.active {
     padding-top: 0;
-    padding-left: 0;
+    padding-bottom: 0;
 }
 
 .nav-header .container .nav-wrapper {
@@ -311,6 +314,10 @@ h3 {
     border-top: 1px solid var(--line-color);
     border-bottom: 1px solid var(--line-color);
     padding: 1rem 0;
+}
+
+.nav-header.active .container .nav-wrapper {
+    border-top: none;
 }
 
 .nav-header .nav-links {
@@ -350,9 +357,19 @@ h3 {
 .desktop-contact{
     border: 1px solid var(--gray-color);
     border-radius: 100vh;
-    padding: 1.5rem 3rem;
+    padding: .5rem;
     text-transform: uppercase;
+    background-color: transparent;
+    font-size: 1.8rem;
 }
+.desktop-contact span {
+    text-shadow: 0 0 var(--white-color), 0 var(--distance) var(--white-color);
+    margin: 0 1.8rem 0 2.3rem;
+}
+.desktop-contact:hover span {
+    text-shadow: 0 calc(var(--distance) * -1) var(--white-color), 0 0 var(--white-color);
+}
+
 
 
 
@@ -524,7 +541,7 @@ h3 {
 
 
 #why-us{
-    padding: 20rem 0;
+    padding: 30rem 0 20rem;
 }
 
 #why-us .container{
@@ -549,6 +566,124 @@ h3 {
 
 
 /* WHY US */
+
+
+
+
+
+
+/* SERVICES */
+
+#services{
+    padding-bottom: 10rem;
+}
+
+#services .container > .txt{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6rem;
+}
+
+#services .container > .txt p{
+    max-width: 50rem;
+}
+
+#services .services-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+#services .service-card{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line-color);
+    transition: background-color .2s ease ;
+}
+#services .service-card:hover{
+    background-color: #1A242D;
+}
+
+#services .service-card:first-child{border-top-left-radius: 6rem;}
+#services .service-card:last-child{border-bottom-right-radius: 6rem;}
+
+#services .service-card .txt{
+    text-align: center;
+    padding: 3rem 2rem 0;
+    transform: translateY(3rem);
+}
+
+#services .service-card .txt p{
+    color: var(--primary-color);
+}
+
+#services .service-card > img{
+    width: 100%;
+    opacity: .4;
+    transition: opacity .2s ease;
+}
+#services .service-card:hover > img{
+    opacity: 1;
+}
+
+#services .service-card .btn-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 4rem 1rem 6rem;
+}
+
+#services .service-card .btn-wrapper div{
+    border-radius: 100vh;
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+#services .service-card .btn-wrapper .one{
+    background-color: var(--secondary-color);
+}
+
+#services .service-card .btn-wrapper .two{
+    border: 1px solid var(--line-color);
+    transition: background-color .2s ease, border .2s ease;
+}
+
+#services .service-card:hover .btn-wrapper .two{
+    border: 1px solid var(--white-color);
+    background-color: var(--white-color);
+}
+
+#services .service-card .btn-wrapper .two svg path{
+    transition: fill .2s ease;
+}
+
+#services .service-card:hover .btn-wrapper .two svg path{
+    fill: var(--black-color);
+}
+
+
+/* SERVICES */
+
+
+
+
+
+
+
+/* REFERENCE */
+
+
+#reference .container{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 20rem;
+}
+
+
+/* REFERENCE */
 
 
 

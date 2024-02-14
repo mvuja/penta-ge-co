@@ -73,6 +73,36 @@ document.addEventListener('mousemove', function(e) {
 
 
 
+// COUNTER ANIMATION - REFERENCE
+gsap.registerPlugin(ScrollTrigger)
+
+const items = document.querySelectorAll("#reference .data")
+
+gsap.from(items, {
+    scrollTrigger: {
+        trigger: "#reference",
+        start: "-300px center",
+    },
+  textContent: 0,
+  duration: 4,
+  ease: "power1.out",
+  snap: { textContent: 1 },
+  stagger: {
+    onUpdate: function() {
+      this.targets()[0].innerHTML = numberWithCommas(Math.ceil(this.targets()[0].textContent))
+    },
+  }
+})
+
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+}
+
+
+
+
+
 // TEXT REVEAL ON SCROLL
 // gsap.config({ trialWarn: false });
 // console.clear();

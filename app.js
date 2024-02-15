@@ -75,7 +75,7 @@ document.addEventListener('mousemove', function(e) {
 
 // COUNTER ANIMATION - REFERENCE
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
-import {SplitText} from "./SplitText.js"
+import {SplitText} from "./SplitText.min.js"
 
 const items = document.querySelectorAll("#reference .data")
 

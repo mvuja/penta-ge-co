@@ -852,8 +852,73 @@ h3 {
 
 
 
+.clients-wrapper {
+    gap: 1.2rem;  
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+  
+#clients .box {
+    height: 25rem;
+    position: relative;
+}
 
+#clients .box::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 500ms, background .2s ease;
+    background: radial-gradient(
+        70rem circle at var(--mouse-x) var(--mouse-y), 
+        rgba(80, 124, 167, 0.7),
+        transparent 20%
+      );
+    position: absolute;
+    z-index: 1;
+}
 
+#clients .box-content {
+    background-color: #141414;
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    inset: 2px;
+}
+
+#clients .box img {
+    filter: brightness(0) invert(1);
+    transition: filter .3s ease;
+}
+
+#clients .box:hover img {
+    filter: none;
+}
+main{
+    color: rgb(80, 124, 167);
+}
+#clients .box::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: opacity .2s ease;
+    z-index:3;
+    opacity: 0;
+    background: radial-gradient(
+        500px circle at var(--mouse-x) var(--mouse-y), 
+        rgba(255, 255, 255, 0.08),
+        transparent 30%
+    );
+}
+
+#clients .box:hover::before {
+   opacity: .6;
+}
 
 
 

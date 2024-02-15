@@ -141,3 +141,21 @@ function makeItHappen() {
 }
 
 makeItHappen()
+
+
+
+
+
+
+// CLIENTS ANIMATION HOVER
+const clientBoxes = document.querySelectorAll('#clients .box')
+document.body.onmousemove = e => {
+  for(const date of clientBoxes) {
+    const rect = date.getBoundingClientRect(),
+          x = e.clientX - rect.left,
+          y = e.clientY - rect.top;
+
+    date.style.setProperty("--mouse-x", `${x}px`)
+    date.style.setProperty("--mouse-y", `${y}px`)
+  };
+}

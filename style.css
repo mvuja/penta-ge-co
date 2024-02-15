@@ -11,11 +11,13 @@
 ::-moz-selection {
     background: var(--s-color);
     color: var(--black-color);
+    -webkit-text-fill-color: var(--black-color);
 }
 
 ::selection {
     background: var(--primary-color);
     color: var(--black-color);
+    -webkit-text-fill-color: var(--black-color);
 }
 
 *,

@@ -159,3 +159,49 @@ document.body.onmousemove = e => {
     date.style.setProperty("--mouse-y", `${y}px`)
   };
 }
+
+
+
+
+
+
+// MARQUEE TEXT - CAREER
+
+// saveStyles is used because GSAP writes inline CSS for styling.
+// If we resize our browser, we want the styling of each viewport-based animation to be saved.
+ScrollTrigger.saveStyles("#career")
+
+ScrollTrigger.matchMedia({
+  
+  // the mobile animations are the same as the desktop, except the font colors are different
+  // the scrub is delayed by 1s with relation to the scrollbar (scrub: 1)
+  // the animation starts a bit earlier
+  "(max-width: 768px)": function() {
+    
+    let mobileTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".marquee",
+        start: "-100% bottom",
+        scrub: 1,
+      }
+    })
+
+    mobileTL.to(".first", {duration: 2, xPercent: -100})
+            .to(".second", {duration: 2, xPercent: 100},"<")
+  },
+  
+  // The tablet and desktop animations have a delay of 7s on scrubs (scrub: 2).
+  "(min-width: 769px)": function() {
+
+    let desktopTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".marquee",
+        start: "-40% bottom",
+        scrub: 5,
+      }
+    });
+
+    desktopTL.to(".first", {duration: 1.4, xPercent: -20})
+            .to(".second", {duration: 1.4, xPercent: 10},"<")
+  }
+});

@@ -179,6 +179,7 @@ input[type=number] {
     --black-color: #121212;
     --gray-color: #B7B7B7;
     --line-color: #414141;
+    --distance: 3em;
 }
 
 .container {
@@ -207,7 +208,6 @@ input[type=number] {
     transition: transform 0.1s linear, color 0.1s linear, background 0.15s linear;
 }
 .btn span {
-    --distance: 3em;
     position: relative;
     line-height: 1;
     color: rgba(0, 0, 0, 0);
@@ -856,6 +856,7 @@ h3 {
     gap: 1.2rem;  
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    margin-top: 7rem;
 }
   
 #clients .box {
@@ -869,14 +870,19 @@ h3 {
     width: 100%;
     top: 0;
     left: 0;
-    transition: opacity 500ms, background .2s ease;
+    transition: background .3s ease, box-shadow .3s ease;
     background: radial-gradient(
-        70rem circle at var(--mouse-x) var(--mouse-y), 
+        130rem circle at var(--mouse-x) var(--mouse-y), 
         rgba(80, 124, 167, 0.7),
         transparent 20%
       );
     position: absolute;
     z-index: 1;
+}
+
+#clients .box:hover::after {
+    background-color: rgb(80, 124, 167);
+    box-shadow: 0 0 1.5rem rgba(255, 255, 255, .3);
 }
 
 #clients .box-content {
@@ -919,6 +925,113 @@ main{
 #clients .box:hover::before {
    opacity: .6;
 }
+
+/* CLIENTS */
+
+
+
+
+
+
+
+
+
+
+
+
+/* CAREER */
+
+#career{
+    padding: 20rem 0 30rem;
+}
+
+#career span {
+    font-size: 7rem;
+    color: #2D2920;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.8;
+    padding: 0 2vw;
+    margin-right: 5vw;
+}
+
+#career .marquee {
+    /* height: auto;
+    position: relative;
+    overflow-x: hidden; */
+}
+
+#career .marquee .wrapper {
+    transform: rotate(10deg);
+    display: block;
+}
+#career .marquee .wrapper2 {
+    transform: rotate(-5deg) translateY(-99%);
+    display: block;
+}
+
+#career .marquee__inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    white-space: nowrap;
+    background: #B68E34;
+    box-shadow: 0 1.4rem 5rem rgba(0, 0, 0, .4);
+}
+
+#career .marquee .first {
+    transform: translateX(-10%);
+}
+
+#career .marquee .second {
+    transform: translateX(-30%);
+}
+
+
+/* CAREER */
+
+
+
+
+
+
+
+
+
+
+
+
+/* NEWS */
+
+
+
+#news .top{
+    background: url(images/news-bg.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 6rem 6rem 0 0;
+    padding: 6rem 7rem 29rem;
+}
+
+#news .top .btn{
+    border: 1px solid var(--black-color);
+    background: transparent;
+}
+
+
+
+
+/* NEWS */
+
+
+
+
+
+
+
+
 
 
 

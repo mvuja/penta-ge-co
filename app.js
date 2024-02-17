@@ -107,8 +107,8 @@ function numberWithCommas(x) {
 // TEXT REVEAL ON SCROLL
 // gsap.config({ trialWarn: false })
 let smoother = ScrollSmoother.create({
-  smooth: 1,
-  content: "main",
+  smooth: 1.5,
+  content: "#scroll-wrapper",
 })
 
 let split = new SplitText(".fill-txt h2", { type: "lines" })
@@ -199,9 +199,25 @@ ScrollTrigger.matchMedia({
         start: "-40% bottom",
         scrub: 5,
       }
-    });
+    })
 
     desktopTL.to(".first", {duration: 1.4, xPercent: -20})
-            .to(".second", {duration: 1.4, xPercent: 10},"<")
+             .to(".second", {duration: 1.4, xPercent: 10},"<")
   }
-});
+})
+
+
+
+
+
+// NEWS SLIDER
+
+const newsSwiper = new Swiper('.news-swiper', {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+})

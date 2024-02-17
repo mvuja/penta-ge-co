@@ -277,6 +277,11 @@ h2.dark {
     background: none;
     -webkit-text-fill-color: currentcolor;
 }
+h2.jumbo {
+    font-size: 8rem;
+    line-height: 1.1;
+    font-weight: 600;
+}
 
 h3 {
     font-size: 3.2rem;
@@ -1023,6 +1028,73 @@ main{
 
 
 
+#news .cards {
+    transform: translateY(-22.5rem);
+}
+
+#news .news-swiper {
+    width: 100%;
+    padding: 0 7rem;
+}
+
+
+#news .news-swiper .card {
+    border-radius: 6rem;
+    overflow: hidden;
+    border: 1px solid var(--line-color);
+}
+
+#news .news-swiper .card-image {
+    border-radius: 6rem;
+    overflow: hidden;
+    display: block;
+}
+
+#news .news-swiper .card-image img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    transform: scale(1.02);
+    transition: transform .3s ease;
+}
+#news .news-swiper .card-image:hover img {
+    transform: scale(1);
+}
+
+#news .news-swiper .card-content {
+    padding: 3rem;
+}
+
+#news .news-swiper .card-content h3 {
+    margin: 3rem 0 5rem;
+}
+
+#news .news-swiper .card-content h3 a {
+    color: var(--white-color);
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    font-size: 3.2rem;
+    transition: color .3s ease;
+}
+#news .news-swiper .card-content h3:hover a {
+    color: var(--primary-color);
+}
+
+#news .news-swiper .card-content .time-to-read {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    font-size: 2rem;
+    color: var(--txt-color);
+}
+
+
+
+
+
 /* NEWS */
 
 
@@ -1036,3 +1108,106 @@ main{
 
 
 /* ---------------MAIN---------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------FOOTER---------------- */
+
+
+
+
+
+
+
+
+#idea .container .idea-wrapper{
+    background-image: url(images/idea-bg.jpg);
+    background-size: cover;
+    border-radius: 0 6rem 0 6rem;
+    padding: 9.5rem 2rem 8rem;
+}
+
+#idea .container .idea-wrapper > *{
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+#idea .container .idea-wrapper .btn-wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 5rem;
+}
+
+
+
+#contact-info{
+    margin-top: 3rem;
+}
+
+#contact-info .container{
+    display: grid;
+    grid-template-columns: 38% 1fr;
+    gap: 3rem;
+}
+
+#contact-info .left{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+#contact-info .left a{
+    border-radius: 6rem;
+    border: 1px solid var(--line-color);
+    aspect-ratio: 1 / 1;
+    padding: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+/* #contact-info .left a:hover{
+    background-color: var(--primary-color);
+} */
+
+#contact-info .left h3{
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+
+
+#copy .container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+#copy .container > *{
+    color: var(--txt-color);
+    font-size: 2rem;
+    transition: color .2s ease;
+}
+
+#copy .container a:hover{
+    color: var(--white-color);
+}
+
+
+/* ---------------FOOTER---------------- */

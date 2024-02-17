@@ -10,9 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+
+
+    
     <div class="cursor"></div>
     <nav class="nav-header" id="main-header">
         <div class="container">
@@ -38,8 +44,8 @@
                 </ul>
 
                 <a href="#" class="btn-icon btn">
-                   <span>Kontakt</span>
-                   <img src="images/contact-btn-arrow.svg" alt="Kontakt">
+                <span>Kontakt</span>
+                <img src="images/contact-btn-arrow.svg" alt="Kontakt">
                 </a>
 
             </div>
@@ -47,268 +53,385 @@
     </nav>
 
 
+    <div id="scroll-wrapper">
+        <main>
+            <section id="hero">
+                <div class="container">
+                    <div class="top">    
+                        <h1>PENTA Ge.CO. ConstrUction Od ideje do realizacije</h1>
+                        <p>Dobro došli u svet graditeljstva i kvalitetne izgradnje, lorem ipsum dolor sit amet consectetur. Feugiat morbi libero suscipit massa massa.</p>
+                        
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn">
+                                <span>KONTAKTIRAJTE NAS</span>
+                            </a>
+                            <a href="#" class="btn btn-secondary">
+                                <span>PREUZMITE PDF</span>
+                            </a>
+                        </div>
+                    </div>
 
-    <main>
-        <section id="hero">
-            <div class="container">
-                <div class="top">    
-                    <h1>PENTA Ge.CO. ConstrUction Od ideje do realizacije</h1>
-                    <p>Dobro došli u svet graditeljstva i kvalitetne izgradnje, lorem ipsum dolor sit amet consectetur. Feugiat morbi libero suscipit massa massa.</p>
+                    <div class="bottom">
+                        <img src="images/hero-image.png" alt="Penta Ge Co">
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="why-us">
+                <div class="container">
                     
-                    <div class="btn-wrapper">
-                        <a href="#" class="btn">
-                            <span>KONTAKTIRAJTE NAS</span>
-                        </a>
-                        <a href="#" class="btn btn-secondary">
-                            <span>PREUZMITE PDF</span>
-                        </a>
+                    <div class="left">
+                        <h3>ZAŠTO NAS?</h3>
+                        <img src="images/arrow-why-us.svg" alt="Strelica">
                     </div>
-                </div>
-
-                <div class="bottom">
-                    <img src="images/hero-image.png" alt="Penta Ge Co">
-                </div>
-
-            </div>
-        </section>
-
-
-        <section id="why-us">
-            <div class="container">
-                
-                <div class="left">
-                    <h3>ZAŠTO NAS?</h3>
-                    <img src="images/arrow-why-us.svg" alt="Strelica">
-                </div>
-                
-                <div class="right">
-                    <img class="abs-img" src="images/why-us-arrow-bg.svg" alt="Strelica">
-                    <h2>Mi smo graditelji odgovornih partnerstava. Gradimo poverenjem i iskustvom!</h2>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section id="services">
-            <div class="container">
-                <div class="txt">
-                    <h2>USLUGE KOJE NUDIMO</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur. Feugiat morbi libero suscipit massa massa.</p>
-                </div>
-
-                <div class="services-cards">
-                    <a href="#" class="service-card">
-                        <div class="txt">
-                            <p>USLUGA 01</p>
-                            <h3>Dizajn i izgradnja</h3>
-                        </div>
-                        <img src="images/1.svg" alt="Projekat 1">
-                        <div class="btn-wrapper">
-                            <div class="one">DI</div>
-                            <div class="two">
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M26.0998 16.2582L11.7514 30.6066L9.39435 28.2495L23.7427 13.9012H10.5434L10.5729 10.5719H29.429V29.4281L26.0998 29.4575L26.0998 16.2582Z" fill="white"/>
-                                </svg>                                    
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="service-card">
-                        <div class="txt">
-                            <p>USLUGA 02</p>
-                            <h3>Ključ u ruke</h3>
-                        </div>
-                        <img src="images/2.svg" alt="Projekat 2">
-                        <div class="btn-wrapper">
-                            <div class="one">KR</div>
-                            <div class="two">
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M26.0998 16.2582L11.7514 30.6066L9.39435 28.2495L23.7427 13.9012H10.5434L10.5729 10.5719H29.429V29.4281L26.0998 29.4575L26.0998 16.2582Z" fill="white"/>
-                                </svg>                                    
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="service-card">
-                        <div class="txt">
-                            <p>USLUGA 03</p>
-                            <h3>Naziv sa uslugu 3</h3>
-                        </div>
-                        <img src="images/3.svg" alt="Projekat 3">
-                        <div class="btn-wrapper">
-                            <div class="one">DI</div>
-                            <div class="two">
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M26.0998 16.2582L11.7514 30.6066L9.39435 28.2495L23.7427 13.9012H10.5434L10.5729 10.5719H29.429V29.4281L26.0998 29.4575L26.0998 16.2582Z" fill="white"/>
-                                </svg>                                    
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section id="reference">
-            <div class="container">
-
-                <div class="left">
-                    <img src="images/reference-img.png" alt="Reference">
-                </div>
-
-                <div class="right">
-                    <div class="fill-txt">
-                        <h2>Otkrijte naše graditeljske uspehe: Pogledajte našu galeriju referenci</h2>
+                    
+                    <div class="right">
+                        <img class="abs-img" src="images/why-us-arrow-bg.svg" alt="Strelica">
+                        <h2>Mi smo graditelji odgovornih partnerstava. Gradimo poverenjem i iskustvom!</h2>
                     </div>
 
-                    <div class="number-wrapper">
-                        <div>
-                            <p class="data">33</p>
-                            <p>ZAVRŠENA <br> PROJEKTA</p>
-                        </div>
-                        <div>
-                            <p class="data">8</p>
-                            <p>U IZGRADNJI <br> OBJEKTA</p>
-                        </div>
-                        <div>
-                            <p class="data">345</p>
-                            <p>HILJADA <br> M2</p>
-                        </div>
-                    </div>
-
-                    <a href="#" class="btn btn-icon" download>
-                        <span>PREUZMITE NAŠE REFERENCE</span>
-                        <img src="images/download-icon.svg" alt="Preuzmi reference">
-                    </a>
-
                 </div>
-
-            </div>
-        </section>
+            </section>
 
 
-        <section id="projects">
-            <div class="container">
-
-                <div class="projects-wrapper">
+            <section id="services">
+                <div class="container">
                     <div class="txt">
-                        <h2 class="dark">Naši projekti i  korisnici usluga</h2>
-                        <p class="dark">Firma se ponosi impresivnim portfeljem projekata koji su obogatili gradsku arhitekturu.</p>
+                        <h2>USLUGE KOJE NUDIMO</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur. Feugiat morbi libero suscipit massa massa.</p>
+                    </div>
+
+                    <div class="services-cards">
+                        <a href="#" class="service-card">
+                            <div class="txt">
+                                <p>USLUGA 01</p>
+                                <h3>Dizajn i izgradnja</h3>
+                            </div>
+                            <img src="images/1.svg" alt="Projekat 1">
+                            <div class="btn-wrapper">
+                                <div class="one">DI</div>
+                                <div class="two">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M26.0998 16.2582L11.7514 30.6066L9.39435 28.2495L23.7427 13.9012H10.5434L10.5729 10.5719H29.429V29.4281L26.0998 29.4575L26.0998 16.2582Z" fill="white"/>
+                                    </svg>                                    
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="service-card">
+                            <div class="txt">
+                                <p>USLUGA 02</p>
+                                <h3>Ključ u ruke</h3>
+                            </div>
+                            <img src="images/2.svg" alt="Projekat 2">
+                            <div class="btn-wrapper">
+                                <div class="one">KR</div>
+                                <div class="two">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M26.0998 16.2582L11.7514 30.6066L9.39435 28.2495L23.7427 13.9012H10.5434L10.5729 10.5719H29.429V29.4281L26.0998 29.4575L26.0998 16.2582Z" fill="white"/>
+                                    </svg>                                    
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#" class="service-card">
+                            <div class="txt">
+                                <p>USLUGA 03</p>
+                                <h3>Naziv sa uslugu 3</h3>
+                            </div>
+                            <img src="images/3.svg" alt="Projekat 3">
+                            <div class="btn-wrapper">
+                                <div class="one">DI</div>
+                                <div class="two">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M26.0998 16.2582L11.7514 30.6066L9.39435 28.2495L23.7427 13.9012H10.5434L10.5729 10.5719H29.429V29.4281L26.0998 29.4575L26.0998 16.2582Z" fill="white"/>
+                                    </svg>                                    
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="reference">
+                <div class="container">
+
+                    <div class="left">
+                        <img src="images/reference-img.png" alt="Reference">
+                    </div>
+
+                    <div class="right">
+                        <div class="fill-txt">
+                            <h2>Otkrijte naše graditeljske uspehe: Pogledajte našu galeriju referenci</h2>
+                        </div>
+
+                        <div class="number-wrapper">
+                            <div>
+                                <p class="data">33</p>
+                                <p>ZAVRŠENA <br> PROJEKTA</p>
+                            </div>
+                            <div>
+                                <p class="data">8</p>
+                                <p>U IZGRADNJI <br> OBJEKTA</p>
+                            </div>
+                            <div>
+                                <p class="data">345</p>
+                                <p>HILJADA <br> M2</p>
+                            </div>
+                        </div>
+
+                        <a href="#" class="btn btn-icon" download>
+                            <span>PREUZMITE NAŠE REFERENCE</span>
+                            <img src="images/download-icon.svg" alt="Preuzmi reference">
+                        </a>
+
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="projects">
+                <div class="container">
+
+                    <div class="projects-wrapper">
+                        <div class="txt">
+                            <h2 class="dark">Naši projekti i  korisnici usluga</h2>
+                            <p class="dark">Firma se ponosi impresivnim portfeljem projekata koji su obogatili gradsku arhitekturu.</p>
+                            <a href="#" class="btn">
+                                <span>POGLEDAJTE SVE</span>
+                            </a>
+                        </div>
+
+                        <div class="projects">
+                            <a href="#" class="project">
+                                <img src="images/project-1.jpg" alt="Projekat">
+                            </a>
+                            <a href="#" class="project">
+                                <img src="images/project-2.jpg" alt="Projekat">
+                            </a>
+                            <a href="#" class="project">
+                                <img src="images/project-3.jpg" alt="Projekat">
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+
+            <section id="clients">
+                <div class="container">
+                    <h2 class="text-center">NAŠI ZADOVOLJNI KLIJENTI</h2>
+
+                    <div class="clients-wrapper">
+                        <div class="box">
+                        <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                        </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="box-content">
+                            <img src="images/client.svg" alt="Klijent">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="career">
+                <div class="marquee">
+                    <a href="#" class="wrapper">
+                        <div class="marquee__inner first"><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span></div>
+                    </a>
+                        
+                    <a href="#" class="wrapper2">
+                        <div class="marquee__inner second"><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span></div>
+                    </a>
+                        
+                </div>
+            </section>
+
+
+            <section id="news">
+                <div class="container">
+                    <div class="top">
+                        <h2 class="dark">Naše najnovije vesti</h2>
                         <a href="#" class="btn">
                             <span>POGLEDAJTE SVE</span>
                         </a>
                     </div>
 
-                    <div class="projects">
-                        <a href="#" class="project">
-                            <img src="images/project-1.jpg" alt="Projekat">
-                        </a>
-                        <a href="#" class="project">
-                            <img src="images/project-2.jpg" alt="Projekat">
-                        </a>
-                        <a href="#" class="project">
-                            <img src="images/project-3.jpg" alt="Projekat">
-                        </a>
+                    <div class="cards">
+                        <div class="swiper news-swiper">
+                            <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="#" class="card-image">
+                                        <img src="images/news-placeholder.jpg" alt="Vesti">
+                                    </a>
+                                    <div class="card-content">
+                                        <p class="date">04 / 12 / 2023</p>
+                                        <h3><a href="#">Lorem ipsum dolor sit amet consecte Id volutpat augue elit pulvinar quis ni</a></h3>
+                                        <div class="time-to-read">
+                                            <img src="images/time-to-read.svg" alt="Vreme čitanja vesti">
+                                            <span>3 min čitanja</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="card">
+                                    <a href="#" class="card-image">
+                                        <img src="images/news-placeholder.jpg" alt="Vesti">
+                                    </a>
+                                    <div class="card-content">
+                                        <p class="date">04 / 12 / 2023</p>
+                                        <h3><a href="#">Lorem ipsum dolor sit amet consecte Id volutpat augue elit pulvinar quis ni</a></h3>
+                                        <div class="time-to-read">
+                                            <img src="images/time-to-read.svg" alt="Vreme čitanja vesti">
+                                            <span>3 min čitanja</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+
+        <footer>
+
+            <section id="idea">
+                <div class="container">
+                    <div class="idea-wrapper">
+
+                        <h2 class="jumbo text-center">IMATE IDEJU ZA VAŠ NOVI PROJEKAT?</h2>
+                        <div class="btn-wrapper">
+                            <a href="#" class="btn">
+                                <span>KONTAKTIRAJTE NAS</span>
+                            </a>
+                            <a href="#" class="btn btn-secondary" download>
+                                <span>PREUZMITE PDF</span>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
+            </section>
 
-            </div>
-        </section>
+            <section id="contact-info">
+                <div class="container">
 
+                    <div class="left">
 
-        <section id="clients">
-            <div class="container">
-                <h2 class="text-center">NAŠI ZADOVOLJNI KLIJENTI</h2>
+                        <a href="#">
+                            <img src="images/contact-footer.svg" alt="Kontakt">
+                            <h3>
+                                <span>Kontakt</span>
+                                <img src="images/arrow-footer.svg" alt="Strelica">
+                            </h3>
+                        </a>
+                        <a href="#">
+                            <img src="images/yt-footer.svg" alt="YouTube">
+                            <h3>
+                                <span>YouTube</span>
+                                <img src="images/arrow-footer.svg" alt="Strelica">
+                            </h3>
+                        </a>
+                        <a href="#">
+                            <img src="images/linkedin-footer.svg" alt="Kontakt">
+                            <h3>
+                                <span>LinkedIn</span>
+                                <img src="images/arrow-footer.svg" alt="Strelica">
+                            </h3>
+                        </a>
+                        <a href="#">
+                            <img src="images/fb-footer.svg" alt="Kontakt">
+                            <h3>
+                                <span>Facebook</span>
+                                <img src="images/arrow-footer.svg" alt="Strelica">
+                            </h3>
+                        </a>
 
-                <div class="clients-wrapper">
-                    <div class="box">
-                      <div class="box-content">
-                        <img src="images/client.svg" alt="Klijent">
-                      </div>
                     </div>
-                    <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
-                      <div class="box">
-                        <div class="box-content">
-                          <img src="images/client.svg" alt="Klijent">
-                        </div>
-                      </div>
+
+                    <div class="right"></div>
+
                 </div>
-            </div>
-        </section>
+            </section>
 
-
-        <section id="career">
-            <div class="marquee">
-                <a href="#" class="wrapper">
-                    <div class="marquee__inner first"><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span><span>Karijera - zapošljavanje</span></div>
-                </a>
-                    
-                <a href="#" class="wrapper2">
-                    <div class="marquee__inner second"><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span><span>Prijavite se</span></div>
-                </a>
-                    
-              </div>
-        </section>
-
-
-        <section id="news">
-            <div class="container">
-                <div class="top">
-                    <h2 class="dark">Naše najnovije vesti</h2>
-                    <a href="#" class="btn">
-                        <span>POGLEDAJTE SVE</span>
-                    </a>
+            <section id="copy">
+                <div class="container">
+                    <a href="#">Privacy Policy</a>
+                    <p>2024 Penta Ge.Co. Construction d.o.o.</p>
+                    <a href="#">Cookie Policy</a>
                 </div>
-            </div>
-        </section>
+            </section>
+
+        </footer>
 
 
-    </main>
+    </div><!-- scroll-wrapper -->
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="module" src="ScrollSmoother.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script type="module" src="app.js"></script>
 </body>
 </html>

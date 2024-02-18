@@ -183,9 +183,9 @@ input[type=number] {
 }
 
 .container {
-    padding-left: 3rem;
-    padding-right: 3rem;
-    max-width: 150rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 144rem;
     margin-left: auto;
     margin-right: auto;
 }
@@ -374,7 +374,7 @@ h3 {
     line-height: 1.2em;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0);
-    text-shadow: 0 0 var(--white-color), 0 1.2em #1095c1;
+    text-shadow: 0 0 var(--white-color), 0 1.2em var(--white-color);
     font-size: 1.8rem;
     padding: 0 0.1em;
     overflow: hidden;
@@ -1159,7 +1159,7 @@ main{
 
 #contact-info .container{
     display: grid;
-    grid-template-columns: 38% 1fr;
+    grid-template-columns: 37% 1fr;
     gap: 3rem;
 }
 
@@ -1177,10 +1177,17 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transition: background-color .2s ease;
 }
-/* #contact-info .left a:hover{
+#contact-info .left a:hover{
     background-color: var(--primary-color);
-} */
+}
+#contact-info .left a img{
+    transition: filter .2s ease;
+}
+#contact-info .left a:hover img{
+    filter: brightness(0);
+}
 
 #contact-info .left h3{
     color: var(--white-color);
@@ -1188,14 +1195,60 @@ main{
     align-items: center;
     gap: 1rem;
     margin-top: auto;
+    transition: color .2s ease;
 }
+#contact-info .left a:hover h3{
+    color: var(--black-color);
+}
+
+
+
+#contact-info .right{
+    background-image: url(images/contact-bg.jpg);
+    background-size: cover;
+    border-radius: 6rem 0 6rem 0;
+    display: grid;
+    grid-template-columns: 55% 1fr;
+    gap: 0rem 10rem;
+    padding: 6rem;
+    align-items: start;
+}
+
+#contact-info .right h2{
+    color: var(--white-color);
+    -webkit-text-fill-color: var(--white-color);
+}
+
+#contact-info .right .c-info{
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+
+#contact-info .right .c-align-right{
+    justify-self: end;
+}
+
+#contact-info .right .c-info a{
+    transition: color .2s ease;
+    font-size: 2rem;
+}
+
+#contact-info .right .c-info a:hover{
+    color: var(--primary-color);
+}
+
+
+
+
 
 
 
 #copy .container{
     display: flex;
     justify-content: space-between;
-    padding-top: 3rem;
+    padding-top: 3.5rem;
     padding-bottom: 3rem;
 }
 

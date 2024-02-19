@@ -819,6 +819,15 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    #reference .container{
+        grid-template-columns: 1fr;
+    }
+
+    #reference .left {
+        display: none;
+    }
+}
 
 /* REFERENCE */
 
@@ -996,6 +1005,18 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    .clients-wrapper {
+        gap: 1rem;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 7rem;
+    }
+
+    .clients-wrapper .box:last-child {
+        display: none;
+    }
+}
+
 
 
 /* CLIENTS */
@@ -1068,7 +1089,11 @@ h3 {
     }
 }
 
-
+@media only screen and (max-width: 1200px) {
+    #career span {
+        font-size: 5rem;
+    }
+}
 
 
 
@@ -1180,7 +1205,19 @@ h3 {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+    #news .top {
+        padding: 4rem 4rem 20rem;
+    }
 
+    #news .news-swiper {
+        padding: 0 4rem;
+    }
+
+    #news .cards {
+        transform: translateY(-16rem);
+    }
+}
 
 
 

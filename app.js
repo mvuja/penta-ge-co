@@ -62,6 +62,34 @@ btns.forEach(el => el.addEventListener('mouseleave', function() {
     this.children[0].style.transform = 'translate3d(0px, 0px, 0px)'
 }))
 
+
+
+
+
+
+// MAGNETIC CARDS
+const magneticCards = document.querySelectorAll('#contact-info .left a')
+
+magneticCards.forEach(el => el.addEventListener('mousemove', function(e) {
+  cursor.classList.add('active')
+  const pos = this.getBoundingClientRect()
+  const mx = e.clientX - pos.left - pos.width/2
+  const my = e.clientY - pos.top - pos.height/2
+  
+  this.style.transform = 'translate('+ mx * 0.08 +'px, '+ my * 0.1 +'px)'
+  this.style.transform += 'rotate3d('+ mx * -0.08 +', '+ my * -0.1 +', 0, 12deg)'
+}))
+
+magneticCards.forEach(el => el.addEventListener('mouseleave', function() {
+  cursor.classList.remove('active')
+  this.style.transform = 'translate3d(0px, 0px, 0px)'
+  this.style.transform += 'rotate3d(0, 0, 0, 0deg)'
+}))
+
+
+
+
+
 // --- CURSOR
 document.addEventListener('mousemove', function(e) {
     cursor.style.left = (e.pageX - 25) + 'px'
@@ -106,10 +134,10 @@ function numberWithCommas(x) {
 
 // TEXT REVEAL ON SCROLL
 // gsap.config({ trialWarn: false })
-// let smoother = ScrollSmoother.create({
-//   smooth: 1.5,
-//   content: "#scroll-wrapper",
-// })
+let smoother = ScrollSmoother.create({
+  smooth: 1.5,
+  content: "#scroll-wrapper",
+})
 
 let split = new SplitText(".fill-txt h2", { type: "lines" })
 let masks

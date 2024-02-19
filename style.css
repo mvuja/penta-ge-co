@@ -897,7 +897,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-  
     inset: 2px;
 }
 
@@ -908,9 +907,6 @@ h3 {
 
 #clients .box:hover img {
     filter: none;
-}
-main{
-    color: rgb(80, 124, 167);
 }
 #clients .box::before{
     content: "";
@@ -1177,7 +1173,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: background-color .2s ease;
+    transition: background-color .2s ease, transform .1s ease;
 }
 #contact-info .left a:hover{
     background-color: var(--primary-color);

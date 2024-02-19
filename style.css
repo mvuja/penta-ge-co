@@ -270,6 +270,7 @@ h2 {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-transform: uppercase;
+    text-wrap: balance;
 }
 h2.dark {
     color: var(--black-color);
@@ -586,6 +587,16 @@ h3 {
 }
 
 
+
+@media only screen and (max-width: 1200px) {
+    #why-us {
+        padding: 25rem 0 15rem;
+    }
+}
+
+
+
+
 /* WHY US */
 
 
@@ -768,6 +779,14 @@ h3 {
 }
 
 
+
+@media only screen and (max-width: 1200px) {
+    #reference .container{
+        gap: 10rem;
+    }
+}
+
+
 /* REFERENCE */
 
 
@@ -839,6 +858,15 @@ h3 {
     grid-area: c;
     border-bottom-right-radius: 6rem;
 }
+
+
+@media only screen and (max-width: 1200px) {
+    #projects .projects-wrapper .txt{
+        gap: 5rem;
+    }
+}
+
+
 
 /* PROJECTS */
 
@@ -927,6 +955,16 @@ h3 {
    opacity: .6;
 }
 
+
+
+@media only screen and (max-width: 1200px) {
+    #clients .box{
+        height: 20rem;
+    }
+}
+
+
+
 /* CLIENTS */
 
 
@@ -987,6 +1025,18 @@ h3 {
 #career .marquee .second {
     transform: translateX(-30%);
 }
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    #career{
+        padding: 10rem 0 15rem;
+    }
+}
+
+
+
 
 
 /* CAREER */
@@ -1085,6 +1135,16 @@ h3 {
     gap: 1.3rem;
     font-size: 2rem;
     color: var(--txt-color);
+}
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    #news .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 
@@ -1257,6 +1317,25 @@ h3 {
 #copy .container a:hover{
     color: var(--white-color);
 }
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    #contact-info .container {
+        grid-template-columns: 40% 1fr;
+    }
+
+    #contact-info .right {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem 4rem;
+        padding: 4rem;
+        align-items: start;
+    }
+}
+
+
 
 
 /* ---------------FOOTER---------------- */

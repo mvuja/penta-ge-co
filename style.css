@@ -636,6 +636,20 @@ h3 {
 
 #why-us{
     padding: 30rem 0 20rem;
+    position: relative;
+}
+
+#why-us::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    background: rgba(27, 70, 126, 0.26);
+    top: 14%;
+    left: 0;
+    z-index: -2;
+    border-radius: 100%;
+    filter: blur(200px);
 }
 
 #why-us .container{
@@ -684,6 +698,13 @@ h3 {
 
     #why-us {
         padding: 10rem 0 10rem;
+    }
+
+    #why-us::after {
+        height: 35rem;
+        background: rgba(27, 70, 126, 0.26);
+        top: 7%;
+        filter: blur(120px);
     }
 }
 
@@ -832,6 +853,14 @@ h3 {
         transform: scale(.7);
         margin: -5rem 0;
     }
+
+    #services .service-card .txt{
+        padding: 0;
+    }
+
+    #services .service-card .btn-wrapper{
+        padding: 2rem 1rem 3rem;
+    }
 }
 
 /* SERVICES */
@@ -975,6 +1004,24 @@ h3 {
 /* PROJECTS */
 
 
+#projects{
+    position: relative;
+}
+
+#projects::after{
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 110rem;
+    background: #fecc572f;
+    top: -15%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    border-radius: 100%;
+    filter: blur(150px);
+}
+
 #projects .projects-wrapper{
     background-image: url(images/projects-bg.jpg);
     background-size: cover;
@@ -1033,8 +1080,18 @@ h3 {
     border-bottom-right-radius: var(--radius);
 }
 
-.mobile-project-btn{
+.mobile-project-btn,
+#projects .projects-swiper{
     display: none;
+}
+
+#projects .swiper-pagination-bullet {
+    background: #B7B7B7;
+    opacity: 1;
+}
+
+#projects .swiper-pagination-bullet-active {
+    background: var(--black-color);
 }
 
 
@@ -1042,7 +1099,44 @@ h3 {
     #projects .projects-wrapper .txt{
         gap: 5rem;
     }
+
+    #projects::after{
+        display: none;
+    }
 }
+
+
+
+@media only screen and (max-width: 1000px) {
+    #projects .projects{
+        display: none;
+    }
+
+    #projects .projects-swiper{
+        display: block;
+        padding: 3rem 0;
+    }
+
+    #projects .projects-swiper a {
+        margin-top: 0;
+        display: block;
+    }
+
+    #projects .projects-swiper .swiper-slide .card{
+        overflow: hidden;
+    }
+    #projects .projects-swiper .swiper-slide:first-child .card{
+        border-radius: 0 0 0 var(--radius);
+    }
+    #projects .projects-swiper .swiper-slide:last-child .card{
+        border-radius: 0 var(--radius) 0 0;
+    }
+
+    #projects .swiper-slide .card img{
+        height: 100%;
+    }
+}
+
 
 @media only screen and (max-width: 900px) {
     .desktop-project-btn{
@@ -1052,7 +1146,7 @@ h3 {
         display: block;
     }
 
-    #projects .projects-wrapper a{
+    #projects .projects-wrapper .btn{
         overflow: hidden;
         margin-top: 3rem;
     }
@@ -1240,6 +1334,20 @@ h3 {
 
 #career{
     padding: 20rem 0 30rem;
+    position: relative;
+}
+
+#career::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50rem;
+    background: rgba(27, 70, 126, 0.26);
+    top: 14%;
+    left: 0;
+    z-index: -2;
+    border-radius: 100%;
+    filter: blur(200px);
 }
 
 #career span {
@@ -1296,6 +1404,26 @@ h3 {
 @media only screen and (max-width: 1200px) {
     #career span {
         font-size: 5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #career {
+        padding: 6rem 0 9rem;
+    }
+
+    #career::after {
+        height: 20rem;
+        background: rgba(27, 70, 126, 0.3);
+        top: 0;
+        filter: blur(90px);
+    }
+
+    #career span {
+        font-size: 3rem;
+    }
+    #career .marquee .wrapper2 {
+        transform: rotate(-8deg) translateY(-99%);
     }
 }
 
@@ -1430,12 +1558,26 @@ h3 {
 }
 
 
+.swiper-pagination-bullet {
+    cursor: pointer;
+    width: 37px;
+    border-radius: 0;
+    height: 3px;
+    background: #414141;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--white-color);
+}
+
+
 @media only screen and (max-width: 620px) {
     #news .top {
         flex-direction: column;
         gap: 1.5rem;
         align-items: flex-start;
         padding: 3rem 2rem 15rem;
+        background-position: top;
     }
 
     #news .top .btn{
@@ -1452,18 +1594,6 @@ h3 {
 
     #news .news-swiper {
         padding: 0 2rem 4rem;
-    }
-
-    #news .swiper-pagination-bullet {
-        cursor: pointer;
-        width: 37px;
-        border-radius: 0;
-        height: 3px;
-        background: #414141;
-    }
-
-    #news .swiper-pagination-bullet-active {
-        background: var(--white-color);
     }
 }
 

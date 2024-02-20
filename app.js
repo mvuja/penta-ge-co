@@ -209,13 +209,13 @@ ScrollTrigger.matchMedia({
     let mobileTL = gsap.timeline({
       scrollTrigger: {
         trigger: ".marquee",
-        start: "-100% bottom",
-        scrub: 1,
+        start: "-40% bottom",
+        scrub: 3,
       }
     })
 
-    mobileTL.to(".first", {duration: 2, xPercent: -100})
-            .to(".second", {duration: 2, xPercent: 100},"<")
+    mobileTL.to(".first", {duration: 1.4, xPercent: -20})
+    .to(".second", {duration: 1.4, xPercent: 10},"<")
   },
   
   // The tablet and desktop animations have a delay of 7s on scrubs (scrub: 2).

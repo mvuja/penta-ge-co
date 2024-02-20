@@ -339,25 +339,33 @@ h3 {
 
 /* CURSOR */
 .cursor {
-    display: none;
+    /* display: none; */
     position: fixed;
-    top: -50px;
-    z-index: 99;
+    top: -20px;
+    left: -20px;
+    z-index: 999999;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background: none;
     border: solid 2px #c3c8de;
     pointer-events: none;
-    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    transition: .1s ease;
 }
   
 .cursor.active {
-    mix-blend-mode: hue;
-    transform: scale(1.5);
-    cursor: none;
+    width: 60px;
+    height: 60px;
+    top: -30px;
+    left: -30px;
     background: var(--white-color);
     border-color: var(--white-color);
+    opacity: .7;
+}
+@media (hover: none) {
+    .cursor {
+        display: none;
+    }
 }
 /* CURSOR */
 
@@ -451,6 +459,10 @@ h3 {
 
     .nav-header .desktop-contact{
         display: none;
+    }
+
+    .mobile-contact {
+        display: block;
     }
 
     body.no-scroll,
@@ -903,15 +915,15 @@ h3 {
 }
 
 #reference .number-wrapper div:first-child .data{
-    background-image: url(images/bg-txt-1.jpg);
+    background-image: url(../images/bg-txt-1.jpg);
     background-position: left;
 }
 #reference .number-wrapper div:nth-child(2) .data{
-    background-image: url(images/bg-txt-2.jpg);
+    background-image: url(../images/bg-txt-2.jpg);
     background-position: left;
 }
 #reference .number-wrapper div:last-child .data{
-    background-image: url(images/bg-txt-3.jpg);
+    background-image: url(../images/bg-txt-3.jpg);
     background-position: left bottom;
 }
 
@@ -1023,7 +1035,7 @@ h3 {
 }
 
 #projects .projects-wrapper{
-    background-image: url(images/projects-bg.jpg);
+    background-image: url(../images/projects-bg.jpg);
     background-size: cover;
     border-radius: var(--radius);
     padding: 5rem;
@@ -1443,7 +1455,7 @@ h3 {
 
 
 #news .top{
-    background: url(images/news-bg.jpg);
+    background: url(../images/news-bg.jpg);
     background-size: cover;
     display: flex;
     align-items: center;
@@ -1633,7 +1645,7 @@ h3 {
 
 
 #idea .container .idea-wrapper{
-    background-image: url(images/idea-bg.jpg);
+    background-image: url(../images/idea-bg.jpg);
     background-size: cover;
     border-radius: 0 var(--radius) 0 var(--radius);
     padding: 9.5rem 2rem 8rem;
@@ -1704,7 +1716,7 @@ h3 {
 
 
 #contact-info .right{
-    background-image: url(images/contact-bg.jpg);
+    background-image: url(../images/contact-bg.jpg);
     background-size: cover;
     border-radius: var(--radius) 0 var(--radius) 0;
     display: grid;

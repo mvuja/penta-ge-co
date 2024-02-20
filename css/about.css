@@ -1,0 +1,13 @@
+#about-hero{
+    padding-top: 20rem;
+}
+
+#about-hero .top{
+    display: flex;
+    justify-content: space-between;
+    gap: 15rem;
+}
+
+#about-hero .bottom img{
+    width: 100%;
+}

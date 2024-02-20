@@ -91,10 +91,21 @@ magneticCards.forEach(el => el.addEventListener('mouseleave', function() {
 
 
 // --- CURSOR
-document.addEventListener('mousemove', function(e) {
-    cursor.style.left = (e.pageX - 25) + 'px'
-    cursor.style.top = (e.pageY - 25) + 'px'
-})
+// window.addEventListener('mousemove', function(e) {
+//     cursor.style.left = (e.pageX - 25) + 'px'
+//     cursor.style.top = (e.pageY - 25) + 'px'
+// })
+const moveCursor = (e)=> {
+  const mouseY = e.clientY
+  const mouseX = e.clientX
+   
+  cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`
+  
+  cursor.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`
+ 
+}
+
+window.addEventListener('mousemove', moveCursor)
 
 
 

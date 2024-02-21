@@ -145,10 +145,10 @@ function numberWithCommas(x) {
 
 // TEXT REVEAL ON SCROLL
 // gsap.config({ trialWarn: false })
-let smoother = ScrollSmoother.create({
-  smooth: 1.5,
-  content: "#scroll-wrapper",
-})
+// let smoother = ScrollSmoother.create({
+//   smooth: 1.5,
+//   content: "#scroll-wrapper",
+// })
 
 let split = new SplitText(".fill-txt h2", { type: "lines" })
 let masks

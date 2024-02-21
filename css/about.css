@@ -11,3 +11,15 @@
 #about-hero .bottom img{
     width: 100%;
 }
+
+#about-hero .company-info{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white-color);
+}
+
+#about-hero .company-info span{
+    white-space: nowrap;
+}

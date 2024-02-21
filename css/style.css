@@ -576,7 +576,7 @@ h3 {
 
 
 #hero{
-    padding-top: 20rem;
+    padding: 20rem 0 30rem;
 }
 
 #hero .top h1{
@@ -600,13 +600,50 @@ h3 {
 
 #hero .bottom{
     margin-top: -15rem;
+    position: relative;
 }
 
-#hero .bottom img{
+#hero .bottom picture img{
     width: 100%;
 }
 
+#hero .bottom .spinning-text{
+    position: absolute;
+    bottom: -10rem;
+    right: 19%;
+    background-color: var(--primary-color);
+    border-radius: 100vh;
+    padding: .6rem;
+    border: 8px solid var(--black-color);
+}
+#hero .bottom .spinning-text img:first-child{
+    animation: rotate 10s infinite linear;
+}
+#hero .bottom .spinning-text img:last-child{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+@keyframes rotate {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 1200px) {
+    #hero{
+        padding: 20rem 0 25rem;
+    }
+}
 
 @media only screen and (max-width: 980px) {
     #hero .bottom{
@@ -616,18 +653,37 @@ h3 {
 
 @media only screen and (max-width: 750px) {
     #hero{
-        padding-top: 15rem;
+        padding: 15rem 0 25rem;
     }
 
     #hero .bottom{
         margin-top: 5rem;
     }
+
+    #hero .bottom .spinning-text{
+        transform: scale(.8);
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    #hero{
+        padding: 15rem 0 16rem;
+    }
 }
 
 @media only screen and (max-width: 500px) {
+    #hero{
+        padding: 15rem 0 11rem;
+    }
+
     #hero .top .btn-wrapper{
         flex-direction: column;
         gap: 1rem;
+    }
+
+    #hero .bottom .spinning-text{
+        transform: scale(.6);
+        right: 14%;
     }
 }
 
@@ -647,7 +703,7 @@ h3 {
 
 
 #why-us{
-    padding: 30rem 0 20rem;
+    padding-bottom: 20rem;
     position: relative;
 }
 
@@ -655,13 +711,13 @@ h3 {
     content: "";
     position: absolute;
     width: 100%;
-    height: 50rem;
+    height: 40rem;
     background: rgba(27, 70, 126, 0.26);
-    top: 14%;
+    top: 27%;
     left: 0;
     z-index: -2;
     border-radius: 100%;
-    filter: blur(200px);
+    filter: blur(150px);
 }
 
 #why-us .container{
@@ -688,15 +744,17 @@ h3 {
 
 @media only screen and (max-width: 1200px) {
     #why-us {
-        padding: 25rem 0 15rem;
+        padding-bottom: 15rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    #why-us .left img {
+        max-width: 10rem;
     }
 }
 
 @media only screen and (max-width: 768px) {
-    #why-us {
-        padding: 16rem 0 15rem;
-    }
-
     #why-us .abs-img{
         display: none;
     }
@@ -709,7 +767,7 @@ h3 {
     }
 
     #why-us {
-        padding: 10rem 0 10rem;
+        padding-bottom: 10rem;
     }
 
     #why-us::after {
@@ -722,7 +780,7 @@ h3 {
 
 @media only screen and (max-width: 500px) {
     #why-us {
-        padding: 7rem 0 8rem;
+        padding-bottom: 8rem;
     }
 }
 

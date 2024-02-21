@@ -23,3 +23,76 @@
 #about-hero .company-info span{
     white-space: nowrap;
 }
+
+
+
+#mission-vision{
+    padding: 20rem 0;
+}
+
+#mission-vision .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20rem;
+}
+
+#mission-vision .left h2{
+    margin-bottom: 10rem;
+}
+
+#mission-vision .left img:first-of-type{
+    margin-bottom: 10rem;
+}
+
+#mission-vision .left .name {
+    color: var(--white-color);
+}
+
+#mission-vision .left .position {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+}
+
+#mission-vision .right .line{
+    height: 1px;
+    background-color: #888;
+    margin: 6rem 0;
+}
+
+#mission-vision .right .mask {
+    opacity: 0.6;
+}
+
+
+
+
+#accordions .acc-wrapper{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15rem;
+}
+
+#accordions .acc-accordion{
+    border-bottom: 1px solid #888;
+}
+
+#accordions .acc-button{
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 100%;
+    padding: 2rem 0;
+}
+
+#accordions .acc-hidden{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+#accordions .acc-accordion .acc-button img{
+    transition: transform .2s ease;
+}
+#accordions .acc-accordion.active .acc-button img{
+    transform: rotate(-90deg);
+}

@@ -150,7 +150,7 @@ function numberWithCommas(x) {
 //   content: "#scroll-wrapper",
 // })
 
-let split = new SplitText(".fill-txt h2", { type: "lines" })
+let split = new SplitText(".fill-txt > *", { type: "lines" })
 let masks
 function makeItHappen() {
   masks = []
@@ -171,6 +171,7 @@ function makeItHappen() {
         //   fontSize: "12px",
         //   indent: 10
         // },
+        // markers: true,
         scrub: true,
         start: "top center",
         end: "bottom center"

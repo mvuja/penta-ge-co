@@ -83,7 +83,88 @@
                 </div>
             </section>
 
+            <section id="mission-vision">
+                <div class="container">
 
+                    <div class="left">
+                        <h2>Misija i vizija PENTA GE.CO.Construction</h2>
+                        <img src="images/about-random.png" alt="Građevinska Firma">
+                        <p class="name">Antonio Zanetti</p>
+                        <p class="position">CEO & Founder</p>
+                        <img src="images/signature.png" alt="Potpis">
+                    </div>
+
+                    <div class="right">
+                        <div class="fill-txt">
+                            <p>Lorem ipsum dolor sit amet consectetur. Tincidunt ullamcorper risus pretium morbi eget augue. Ullamcorper nec vitae. consequat viverra Pellentesque</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="fill-txt">
+                            <p>Lorem ipsum dolor sit amet consectetur. Lectus quis orci tristique sapien velit etiam mi. Gravida sed aliquet in leo sed odio pellentesque nisl amet. Morbi ultrices at consequat viverra. Pellentesque imperdiet odio netus eu donec sit amet risus. Ipsum elementum scelerisque ultrices urna faucibus</p>
+                        </div>
+                        <div class="line"></div>
+                        <div class="fill-txt">
+                            <p>Lorem ipsum dolor sit amet consectetur. Lectus quis orci tristique sapien velit etiam mi. </p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="accordions">
+                <div class="container">
+                    <h2>Društvena <br/> odgovornost</h2>
+
+                    <div class="acc-wrapper">
+
+                        <div class="left">
+
+                            <div class="acc-accordion active">
+                                <button class="acc-button">
+                                    <h3>DA NAM BUDE BOLJE</h3>
+                                    <img src="images/arrow-acc.svg" alt="Strelica">
+                                </button>
+                                <div class="acc-hidden">
+                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
+                                </div>
+                            </div>
+                            <div class="acc-accordion">
+                                <button class="acc-button">
+                                    <h3>KORPORATIVNI KODEKS KORPORACIJE</h3>
+                                    <img src="images/arrow-acc.svg" alt="Strelica">
+                                </button>
+                                <div class="acc-hidden">
+                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
+                                </div>
+                            </div>
+                            <div class="acc-accordion">
+                                <button class="acc-button">
+                                    <h3>POLITIKA GRUPACIJE</h3>
+                                    <img src="images/arrow-acc.svg" alt="Strelica">
+                                </button>
+                                <div class="acc-hidden">
+                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
+                                </div>
+                            </div>
+                            <div class="acc-accordion">
+                                <button class="acc-button">
+                                    <h3>PORUKA GRUPACIJE </h3>
+                                    <img src="images/arrow-acc.svg" alt="Strelica">
+                                </button>
+                                <div class="acc-hidden">
+                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="right">
+                            <img src="images/accordion-right.png" alt="Penta GeCo">
+                        </div>
+
+                    </div>
+                </div>
+            </section>
 
 
         </main>
@@ -180,6 +261,46 @@
 
     </div><!-- scroll-wrapper -->
 
+
+    <script>
+        // ACCORDION
+        const accordionContainer = document.querySelectorAll('.acc-accordion')
+        const accordionButton = document.querySelectorAll('.acc-button')
+        const accordionHidden = document.querySelectorAll('.acc-hidden')
+        if (accordionButton) {
+            accordionButton.forEach(accordion => {
+                const parent = accordion.parentElement
+                const hidden = accordion.nextElementSibling
+                
+                if(parent.classList.contains('active')){
+                    hidden.style.maxHeight = hidden.scrollHeight + 'px'
+                }
+
+                accordion.addEventListener('click', () => {
+                    accordionButton.forEach(el => {
+                        el.classList.remove('active')
+                        const parent2 = el.parentElement
+                        const hidden2 = el.nextElementSibling
+                        hidden2.style.maxHeight = null
+                        parent2.classList.remove('active')
+                    })
+
+                    if (hidden.style.maxHeight) {
+                        console.log('zatvori');
+                        hidden.style.maxHeight = null
+                        parent.classList.remove('active')
+                        accordion.classList.remove('active')
+                    } else {
+                        console.log('otvori');
+                        hidden.style.maxHeight = hidden.scrollHeight + 'px'
+                        accordion.classList.add('active')
+                        parent.classList.add('active')
+                    }
+                })
+
+            })
+        }
+    </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

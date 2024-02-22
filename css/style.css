@@ -44,7 +44,7 @@ button:focus-visible {
 }
 
 /* width */
-::scrollbar {
+::-webkit-scrollbar {
     width: .5vw;
 }
 

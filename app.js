@@ -152,16 +152,22 @@ function numberWithCommas(x) {
 
 let split = new SplitText(".fill-txt > *", { type: "lines" })
 let masks
+
+let startPer = 0
+
 function makeItHappen() {
   masks = []
   split.lines.forEach((target) => {
+    startPer += 100
     let mask = document.createElement("span")
     mask.className = "mask"
     target.append(mask)
     masks.push(mask)
     gsap.to(mask, {
+      duration: 500,
       scaleX: 0,
       transformOrigin: "right center",
+      // ease: "power1.in",
       ease: "none",
       scrollTrigger: {
         trigger: target,
@@ -172,11 +178,11 @@ function makeItHappen() {
         //   indent: 10
         // },
         // markers: true,
-        scrub: true,
-        start: "top center",
-        end: "bottom center"
+        scrub: .5,
+        start: `${startPer}% center`,
+        end: `${startPer + 200}% center`
       }
-    })
+    }, '+=1')
   })
 }
 

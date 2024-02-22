@@ -327,7 +327,7 @@ h3 {
     }
 
     .btn, .btn-icon {
-        padding: 1.4rem 4rem;
+        padding: 1.8rem 4rem;
     }
 }
 
@@ -601,6 +601,7 @@ h3 {
 #hero .bottom{
     margin-top: -15rem;
     position: relative;
+    z-index: -1;
 }
 
 #hero .bottom picture img{
@@ -722,7 +723,7 @@ h3 {
 
 #why-us .container{
     display: flex;
-    gap: 10rem;
+    gap: 30rem;
 }
 
 #why-us .container .left h3{
@@ -867,23 +868,54 @@ h3 {
     background-color: var(--secondary-color);
 }
 
-#services .service-card .btn-wrapper .two{
+
+
+
+#services .service-card .two{
+    overflow: hidden;
+    position: relative;
     border: 1px solid var(--line-color);
-    transition: background-color .2s ease, border .2s ease;
+    transition: border .3s ease;
 }
-
-#services .service-card:hover .btn-wrapper .two{
+#services .service-card:hover .two{
     border: 1px solid var(--white-color);
+}
+
+
+
+#services .service-card .two::before{
+    content: "";
+    position: absolute;
+    inset: 50%;
+    border-radius: 100vh;
     background-color: var(--white-color);
+    transition: inset .3s ease;
+}
+#services .service-card:hover .two::before{
+    inset: 0;
 }
 
-#services .service-card .btn-wrapper .two svg path{
-    transition: fill .2s ease;
+
+#services .service-card .two img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform .3s ease;
 }
 
-#services .service-card:hover .btn-wrapper .two svg path{
-    fill: var(--black-color);
+#services .service-card .two img:first-child{
+    transform: translate(-180%, 180%);
 }
+#services .service-card:hover .two img:first-child{
+    transform: translate(-50%, -50%);
+}
+
+#services .service-card:hover .two img:last-child{
+    transform: translate(180%, -180%);
+}
+
+
 
 
 
@@ -915,8 +947,8 @@ h3 {
         font-size: 1.6rem;
     }
 
-    #services .service-card .btn-wrapper svg {
-        transform: scale(.7);
+    #services .service-card .two img{
+        transform: translate(-50%, -50%) scale(0.7);
     }
 
     #services .service-card > img{
@@ -1209,11 +1241,10 @@ h3 {
         display: none;
     }
     .mobile-project-btn{
-        display: block;
+        display: flex;
     }
 
     #projects .projects-wrapper .btn{
-        overflow: hidden;
         margin-top: 3rem;
     }
 
@@ -1522,7 +1553,7 @@ h3 {
     padding: 6rem 7rem 29rem;
 }
 
-#news .top .btn{
+#news .btn{
     border: 1px solid var(--black-color);
     background: transparent;
 }
@@ -1540,38 +1571,42 @@ h3 {
 }
 
 
-#news .news-swiper .card {
+
+
+
+
+.news-card {
     border-radius: var(--radius);
     overflow: hidden;
-    border: 1px solid var(--line-color);
 }
 
-#news .news-swiper .card-image {
+.news-card .card-image {
     border-radius: var(--radius);
     overflow: hidden;
     display: block;
 }
 
-#news .news-swiper .card-image img {
+.news-card .card-image img {
     width: 100%;
     aspect-ratio: 16 / 9;
     object-fit: cover;
     transform: scale(1.02);
     transition: transform .3s ease;
 }
-#news .news-swiper .card-image:hover img {
+.news-card:hover .card-image img {
     transform: scale(1);
 }
 
-#news .news-swiper .card-content {
-    padding: 3rem;
+.news-card .card-content {
+    padding: 10rem 3rem 3rem;
+    margin-top: -7rem;
+    border: 1px solid var(--line-color);
+    border-top: 0;
+    border-radius: 0 0 var(--radius) var(--radius);
 }
 
-#news .news-swiper .card-content h3 {
+.news-card h3 {
     margin: 3rem 0 5rem;
-}
-
-#news .news-swiper .card-content h3 a {
     color: var(--white-color);
     line-height: 1.2;
     display: -webkit-box;
@@ -1581,11 +1616,11 @@ h3 {
     font-size: 3.2rem;
     transition: color .3s ease;
 }
-#news .news-swiper .card-content h3:hover a {
+.news-card:hover h3{
     color: var(--primary-color);
 }
 
-#news .news-swiper .card-content .time-to-read {
+.news-card .time-to-read {
     display: flex;
     align-items: center;
     gap: 1.3rem;
@@ -1596,15 +1631,17 @@ h3 {
 
 
 
+
+
 @media only screen and (max-width: 1200px) {
-    #news .container{
+    #news .container:first-child{
         padding-left: 0;
         padding-right: 0;
     }
 }
 
 @media only screen and (max-width: 1024px) {
-    #news .news-swiper .card-content h3 a {
+    .news-card h3 {
         font-size: 2rem;
     }
 }
@@ -1636,8 +1673,33 @@ h3 {
     background: var(--white-color);
 }
 
+#news .btn-mobile{
+    display: none;
+}
+
+
 
 @media only screen and (max-width: 620px) {
+    #news .btn-desktop{
+        display: none;
+    }
+    #news .btn-mobile{
+        display: flex;
+        transform: translateY(-9rem);
+    }
+
+    #news .btn{
+        border: 1px solid var(--white-color);
+        text-shadow: 0 0 var(--white-color), 0 var(--distance) var(--white-color);
+        overflow: hidden;
+    }
+    #news .btn span{
+        text-shadow: 0 0 var(--white-color), 0 var(--distance) var(--white-color);
+    }
+    #news .btn:hover span {
+        text-shadow: 0 calc(var(--distance) * -1) var(--white-color), 0 0 var(--white-color);
+    }
+
     #news .top {
         flex-direction: column;
         gap: 1.5rem;
@@ -1654,8 +1716,18 @@ h3 {
         transform: translateY(-11rem);
     }
 
-    #news .news-swiper .card-content h3 {
+    .news-card h3 {
         margin: 2rem 0 3rem;
+    }
+
+    .news-card .card-content {
+        padding: 9rem 2rem 2rem;
+        margin-top: -7rem;
+    }
+
+    .news-card .time-to-read {
+        gap: 1.1rem;
+        font-size: 1.6rem;
     }
 
     #news .news-swiper {
@@ -1890,10 +1962,6 @@ h3 {
 }
 
 @media only screen and (max-width: 640px) {
-    #idea{
-        margin-top: -4rem;
-    }
-
     #idea .container,
     #contact-info .container{
         padding-left: 0;

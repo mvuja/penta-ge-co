@@ -66,6 +66,11 @@
 
 
 
+#accordions h2{
+    width: fit-content;
+    margin-bottom: 3rem;
+}
+
 #accordions .acc-wrapper{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -73,12 +78,13 @@
 }
 
 #accordions .acc-accordion{
-    border-bottom: 1px solid #888;
+    border-bottom: 1px solid #414141;
 }
 
 #accordions .acc-button{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: transparent;
     width: 100%;
     padding: 2rem 0;
@@ -90,9 +96,116 @@
     transition: max-height 0.3s ease;
 }
 
+#accordions .acc-hidden p{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
 #accordions .acc-accordion .acc-button img{
     transition: transform .2s ease;
 }
 #accordions .acc-accordion.active .acc-button img{
     transform: rotate(-90deg);
+}
+
+
+
+
+
+
+#video{
+    position: relative;
+    padding: 20rem 0;
+}
+
+#video .placeholder{
+    width: 100%;
+}
+
+#video .play-btn{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+}
+
+
+
+
+
+#team .team-txt{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25rem;
+    margin-bottom: 7rem;
+}
+
+#team h2{
+    width: fit-content;
+}
+
+#team .team-txt .txt{
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+#team .team-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.team-card img{
+    width: 100%;
+}
+
+.team-card:first-child img{
+    border-radius: var(--radius) 0 0 0;
+}
+.team-card:last-child img{
+    border-radius: 0 0 var(--radius) 0;
+}
+
+.team-card p:first-of-type{
+    color: var(--white-color);
+    margin-top: 1.5rem;
+    margin-bottom: 0.1rem;
+}
+
+.team-card p.title{
+    font-size: 1.8rem;
+}
+
+
+
+
+
+#licences{
+    padding: 15rem 0 20rem;
+}
+
+#licences .licence-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-top: 6rem;
+}
+
+.licence-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #414141;
+    border-radius: 100vh;
+    aspect-ratio: 1 / 1;
+    padding: 5rem;
+}
+
+.licence-card p{
+    color: var(--white-color);
+    text-align: center;
+    margin-top: 3rem;
 }

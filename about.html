@@ -166,6 +166,96 @@
                 </div>
             </section>
 
+            <section id="video">
+                <img class="placeholder" src="images/video-placeholder.jpg" alt="Plceholder">
+                <button class="play-btn">
+                    <img src="images/play-video.svg" alt="Play video">
+                </button>
+            </section>
+
+            <section id="team">
+                <div class="container">
+
+                    <div class="team-txt">
+                        <h2>Niko od nas nije pametan kao svi mi</h2>
+                        <div class="txt">
+                            <img src="images/team-sun.svg" alt="Sunce">
+                            <p>Lorem ipsum dolor sit amet consectetur. In id lacus eget turpis risus urna turpis enim. Justo fermenm vitae viverra in lectus sed</p>
+                        </div>
+                    </div>
+
+                    <div class="team-grid">
+                        <div class="team-card">
+                            <img src="images/team/team1.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="images/team/team2.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="images/team/team3.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="images/team/team1.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="images/team/team2.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="images/team/team3.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="images/team/team1.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="images/team/team2.jpg" alt="Tim">
+                            <p>Miloš Prokić</p>
+                            <p class="title">Chief executive officer</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="licences">
+                <div class="container">
+                    <h2 class="text-center">Licence i standardi</h2>
+
+                    <div class="licence-grid">
+                        <div class="licence-card">
+                            <img src="images/licence-placeholder.svg" alt="Placeholder">
+                            <p>Licenca broj jedan i naziv licence</p>
+                        </div>
+                        <div class="licence-card">
+                            <img src="images/licence-placeholder.svg" alt="Placeholder">
+                            <p>Licenca broj jedan i naziv licence</p>
+                        </div>
+                        <div class="licence-card">
+                            <img src="images/licence-placeholder.svg" alt="Placeholder">
+                            <p>Licenca broj jedan i naziv licence</p>
+                        </div>
+                        <div class="licence-card">
+                            <img src="images/licence-placeholder.svg" alt="Placeholder">
+                            <p>Licenca broj jedan i naziv licence</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
 
         </main>
 
@@ -271,33 +361,34 @@
             accordionButton.forEach(accordion => {
                 const parent = accordion.parentElement
                 const hidden = accordion.nextElementSibling
-                
+
                 if(parent.classList.contains('active')){
+                    console.log('ima');
                     hidden.style.maxHeight = hidden.scrollHeight + 'px'
+                    accordion.classList.add('active')
+                    parent.classList.add('active')
                 }
 
                 accordion.addEventListener('click', () => {
-                    accordionButton.forEach(el => {
-                        el.classList.remove('active')
-                        const parent2 = el.parentElement
-                        const hidden2 = el.nextElementSibling
-                        hidden2.style.maxHeight = null
-                        parent2.classList.remove('active')
-                    })
-
                     if (hidden.style.maxHeight) {
-                        console.log('zatvori');
                         hidden.style.maxHeight = null
                         parent.classList.remove('active')
                         accordion.classList.remove('active')
                     } else {
-                        console.log('otvori');
+                        accordionHidden.forEach(hiddenBefore => {
+                            hiddenBefore.style.maxHeight = null
+                        })
+                        accordionButton.forEach(el => {
+                            el.classList.remove('active')
+                        })
+                        accordionContainer.forEach(el => {
+                            el.classList.remove('active')
+                        })
                         hidden.style.maxHeight = hidden.scrollHeight + 'px'
                         accordion.classList.add('active')
                         parent.classList.add('active')
                     }
                 })
-
             })
         }
     </script>

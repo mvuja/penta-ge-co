@@ -162,7 +162,7 @@
 #accordions .acc-hidden{
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease;
+    transition: max-height 0.31s cubic-bezier(.61,-0.27,.54,1.05);
 }
 
 #accordions .acc-hidden p{
@@ -217,6 +217,64 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: transparent;
+    transition: transform .16s ease;
+}
+
+#video .play-btn::after {
+    opacity: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: var(--white-color);
+    border-radius: 100%;
+    animation-name: ripple;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.65, 0, 0.34, 1);
+    z-index: -1;
+}
+
+
+#video .play-btn::before{
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border: 2px solid var(--white-color);
+    border-radius: 100vh;
+    transition: opacity .3s ease, transform .3s ease;
+}
+#video .play-btn:hover::before{
+    opacity: 0;
+    transform: scale3d(1.2, 1.2, 1);
+}
+#video .play-btn:hover{    
+    transform: translate(-50%, -50%) scale(.92);
+}
+#video .play-btn:active{    
+    transform: translate(-50%, -50%) scale(.85);
+}
+
+
+  
+@keyframes ripple {
+    from {
+      opacity: 1;
+      transform: scale3d(0.75, 0.75, 1);
+    }
+    to {
+      opacity: 0;
+      transform: scale3d(1.5, 1.5, 1);
+    }
 }
 
 
@@ -236,6 +294,9 @@
         transform: scale(.6);
     }
 }
+
+
+
 
 
 

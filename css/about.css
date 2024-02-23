@@ -6,6 +6,11 @@
     display: flex;
     justify-content: space-between;
     gap: 15rem;
+    margin-bottom: 5rem;
+}
+
+#about-hero .top .left{
+    margin-top: 4rem;
 }
 
 #about-hero .bottom img{
@@ -18,11 +23,37 @@
     justify-content: space-between;
     align-items: center;
     color: var(--white-color);
+    margin-top: 2rem;
 }
 
 #about-hero .company-info span{
     white-space: nowrap;
 }
+
+
+
+@media only screen and (max-width: 870px) {
+    #about-hero{
+        padding-top: 15rem;
+    }
+
+    #about-hero .top{
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #about-hero .top .left{
+        margin-top: 0;
+    }
+
+    #about-hero .company-info{
+        justify-content: start;
+    }
+}
+
+
+
 
 
 
@@ -62,6 +93,44 @@
 #mission-vision .right .mask {
     opacity: 0.6;
 }
+
+
+
+
+@media only screen and (max-width: 1000px) {
+    #mission-vision{
+        padding: 10rem 0;
+    }
+
+    #mission-vision .container{
+        gap: 1rem;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    #mission-vision {
+        padding: 5rem 0 8rem;
+    }
+
+    #mission-vision .container{
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    #mission-vision .left h2 {
+        margin-bottom: 3rem;
+    }
+
+    #mission-vision .left img:first-of-type {
+        margin-bottom: 3rem;
+    }
+
+    #mission-vision .right .line {
+        margin: 3rem 0;
+    }
+}
+
+
 
 
 
@@ -111,6 +180,26 @@
 
 
 
+@media only screen and (max-width: 1000px) {
+    #accordions .acc-wrapper{
+        grid-template-columns: 60% 1fr;
+        gap: 4rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #accordions .acc-wrapper {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+    }
+
+    #accordions .acc-button h3{
+        text-align: left;
+    }
+}
+
+
+
 
 
 #video{
@@ -129,6 +218,25 @@
     transform: translate(-50%, -50%);
     background-color: transparent;
 }
+
+
+
+@media only screen and (max-width: 1000px) {
+    #video {
+        padding: 10rem 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #video {
+        padding: 8rem 0;
+    }
+
+    #video .play-btn img{
+        transform: scale(.6);
+    }
+}
+
 
 
 
@@ -181,6 +289,26 @@
 
 
 
+@media only screen and (max-width: 1000px) {
+    #team .team-txt{
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 5rem;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #team .team-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
 
 #licences{
     padding: 15rem 0 20rem;
@@ -208,4 +336,40 @@
     color: var(--white-color);
     text-align: center;
     margin-top: 3rem;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    #licences {
+        padding: 8rem 0 10rem;
+    }
+
+    #licences .licence-grid{
+        gap: 1rem;
+    }
+
+    .licence-card {
+        padding: 3rem;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #licences {
+        padding: 6rem 0 8rem;
+    }
+
+    #licences .licence-grid{
+        margin-top: 4rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .licence-card {
+        padding: 2rem;
+    }
+
+    .licence-card p {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+    }
 }

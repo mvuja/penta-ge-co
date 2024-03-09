@@ -215,19 +215,19 @@
 }
 
 
-#single-content #gallery-list{
+#gallery-list{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-bottom: 10rem;
 }
 
-#single-content #gallery-list > *:first-child{
+#gallery-list > *:first-child{
     border-radius: var(--radius) 0 0 0;
     overflow: hidden;
 }
 
-#single-content #gallery-list > *:last-child{
+#gallery-list > *:last-child{
     border-radius: 0 0 var(--radius) 0;
     overflow: hidden;
 }
@@ -269,7 +269,7 @@
         padding: 1.3rem 3rem;
     }
 
-    #single-content #gallery-list{
+    #gallery-list{
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
         margin-bottom: 7rem;

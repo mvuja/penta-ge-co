@@ -301,7 +301,9 @@
 
 
 
-
+#team{
+    padding-bottom: 20rem;
+}
 
 #team .team-txt{
     display: grid;
@@ -351,14 +353,23 @@
 
 
 @media only screen and (max-width: 1000px) {
+    #team{
+        padding-bottom: 10rem;
+    }
+
     #team .team-txt{
         grid-template-columns: 1fr;
         gap: 3rem;
         margin-bottom: 5rem;
     }
+
 }
 
 @media only screen and (max-width: 700px) {
+    #team{
+        padding-bottom: 6rem;
+    }
+
     #team .team-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
@@ -371,7 +382,7 @@
 
 
 
-#licences{
+/* #licences{
     padding: 15rem 0 20rem;
 }
 
@@ -433,4 +444,4 @@
         font-size: 1.4rem;
         margin-top: 2rem;
     }
-}
+} */

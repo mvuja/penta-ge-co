@@ -677,6 +677,10 @@ h3 {
     max-width: 90rem;
 }
 
+#hero .top h1 span{
+    font-weight: 400;
+}
+
 #hero .top p{
     max-width: 65rem;
     margin: 3rem 0;

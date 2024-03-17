@@ -42,6 +42,16 @@
     position: relative;
 }
 
+#projects-page .txt-arrow{
+    position: relative;
+}
+
+#projects-page .txt-arrow img{
+    position: absolute;
+    bottom: -30%;
+    right: 0;
+}
+
 #projects-page .projects-grid::before{
     content: "";
     position: absolute;
@@ -95,6 +105,10 @@
     #projects-page .filters-wrapper{
         padding: 1.5rem;
     }
+
+    #projects-page .txt-arrow img{
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -119,17 +133,59 @@
 
 
 
-
-
-
 .project-card{
     overflow: hidden;
     border-radius: var(--radius);
+    position: relative;
 }
-.project-card img{
+.project-card > img{
     width: 100%;
 }
 
+.project-card .project-hover{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(12px);
+    padding: 2rem 3rem 3rem;
+    transform: scale(.93);
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.project-card:hover .project-hover{
+    transform: scale(1);
+    opacity: 1;
+}
+
+.project-card .project-hover h3,
+.project-card .project-hover p{
+    color: var(--white-color);
+    max-width: 90%;
+}
+
+.project-card .project-hover img{
+    position: absolute;
+    bottom: 3.6rem;
+    right: 3rem;
+}
+
+@media (hover: none) {
+    .project-card .project-hover{
+        padding: 1rem 1.2rem 1rem;
+    }
+
+    .project-card .project-hover h3,
+    .project-card .project-hover p{
+        max-width: 100%;
+    }
+
+    .project-card .project-hover img{
+        display: none;
+    }
+}
 
 
 
@@ -137,6 +193,8 @@
 
 
 
+
+/* SINGLE PROJECT */
 
 
 #single-hero-project{
@@ -179,13 +237,9 @@
 @media only screen and (max-width: 768px) {
     #single-hero-project .container{
         padding-top: 17rem;
-    }
-
-    #single-hero-project h1{
-        font-size: 3rem;
+        padding-bottom: 10rem;
     }
 }
-
 
 
 
@@ -244,13 +298,29 @@ body:has(#project-info){
 }
 
 
+@media only screen and (max-width: 768px) {
+    #project-info {
+        margin-top: -6rem;
+    }
+
+    #project-info .project-details {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 6rem;
+        gap: 3rem;
+    }
+
+    #project-info .project-txt {
+        margin: 6rem auto 7rem;
+    }
+}
 
 
-#challenge .container{
-    background: linear-gradient(to bottom, var(--black-color) 40%, #1A242D);
-    border-radius: var(--radius);
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+
+
+
+
+#challenge{
+    margin-bottom: 7rem;
 }
 
 #challenge h3{
@@ -296,12 +366,24 @@ body:has(#project-info){
     background-color: var(--black-color);
     padding: 7rem 0 15rem;
     border-radius: var(--radius) var(--radius) 0 0;
-    margin-top: 7rem;
 }
 
 #gallery #gallery-list{
     margin-bottom: 0;
+    margin-top: 10rem;
 }
 
+#gallery iframe{
+    width: 100%;
+    aspect-ratio:  16 / 9;
+}
 
+@media only screen and (max-width: 768px) {
+    #gallery{
+        padding: 5rem 0 7rem;
+    }
 
+    #gallery #gallery-list{
+        margin-top: 6rem;
+    }    
+}

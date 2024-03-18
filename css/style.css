@@ -1159,6 +1159,7 @@ h3 {
 #reference .number-wrapper div:last-child .data {
     background-image: url(../images/bg-txt-3.jpg);
     background-position: left bottom;
+    background-size: cover;
 }
 
 
@@ -1283,7 +1284,7 @@ h3 {
 }
 
 #projects .projects-wrapper .txt p {
-    max-width: 30rem;
+    max-width: 35rem;
 }
 
 #projects .projects-wrapper .btn {

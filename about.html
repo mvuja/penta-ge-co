@@ -1,235 +1,279 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>O nama - Penta Ge.Co. Construction</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>O nama - Penta Ge.Co. Construction</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+        />
 
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <div class="cursor"></div>
+        <nav class="nav-header" id="main-header">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo-main"
+                        ><img src="images/Penta logo.png" alt="LOGO"
+                    /></a>
 
+                    <div class="hamburger">
+                        <svg
+                            class="ham hamRotate ham8"
+                            viewBox="0 0 100 100"
+                            width="80"
+                            onclick="this.classList.toggle('active')"
+                        >
+                            <path
+                                class="line top"
+                                d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"
+                            />
+                            <path class="line middle" d="m 30,50 h 40" />
+                            <path
+                                class="line bottom"
+                                d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"
+                            />
+                        </svg>
+                    </div>
 
+                    <ul class="nav-links">
+                        <li><a href="about.html">O nama</a></li>
+                        <li><a href="#">Usluge</a></li>
+                        <li><a href="projects.html">Projekti</a></li>
+                        <li><a href="#">Karijera</a></li>
+                        <li><a href="news.html">Vesti</a></li>
+                        <li class="mobile-contact"><a href="contact.html">Kontakt</a></li>
+                    </ul>
 
-    
-    <div class="cursor"></div>
-    <nav class="nav-header" id="main-header">
-        <div class="container">
-            <div class="nav-wrapper">
-
-                <a href="index.html" class="logo-main"><img src="images/Penta logo.png" alt="LOGO"></a>
-
-                <div class="hamburger">
-                    <svg class="ham hamRotate ham8" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
-                        <path class="line top" d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20" />
-                        <path class="line middle" d="m 30,50 h 40" />
-                        <path class="line bottom" d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20" />
-                    </svg>
+                    <a href="contact.html" class="btn-icon btn desktop-contact">
+                        <span>Kontakt</span>
+                        <img src="images/contact-btn-arrow.svg" alt="Kontakt" />
+                    </a>
                 </div>
-
-                <ul class="nav-links">
-                    <li><a href="about.html">O nama</a></li>
-                    <li><a href="#">Usluge</a></li>
-                    <li><a href="projects.html">Projekti</a></li>
-                    <li><a href="#">Karijera</a></li>
-                    <li><a href="news.html">Vesti</a></li>
-                    <li class="mobile-contact"><a href="contact.html">Kontakt</a></li>
-                </ul>
-
-                <a href="contact.html" class="btn-icon btn desktop-contact">
-                    <span>Kontakt</span>
-                    <img src="images/contact-btn-arrow.svg" alt="Kontakt">
-                </a>
-
             </div>
-        </div>
-    </nav>
+        </nav>
 
+        <div id="scroll-wrapper">
+            <main>
+                <section id="about-hero">
+                    <div class="container">
+                        <div class="top">
+                            <h1>PENTA GRADI SIGURNO, PRECIZNO I ODGOVORNO</h1>
+                            <div class="left">
+                                <p>
+                                    Preciznost u radu, iskusni i odgovorni inženjeri i članovi tima,
+                                    pedantnost u svim fazama rada, poštovanje svih rokova i
+                                    finansijskih parametara - ukratko PENTA.
+                                </p>
+                                <h3 class="company-info">
+                                    <div>
+                                        <span>60</span>
+                                        <img src="images/plus.svg" alt="Plus" />
+                                        <span>zaposlenih</span>
+                                    </div>
+                                    <div>
+                                        <span>40</span>
+                                        <img src="images/plus.svg" alt="Plus" />
+                                        <span>objekata</span>
+                                    </div>
+                                </h3>
+                            </div>
+                        </div>
 
-    <div id="scroll-wrapper">
-        <main>
+                        <div class="bottom">
+                            <picture>
+                                <source
+                                    media="(max-width: 500px)"
+                                    srcset="images/about-hero-mobile.png"
+                                />
+                                <img src="images/about-hero.png" alt="Penta Ge Co" />
+                            </picture>
+                        </div>
+                    </div>
+                </section>
 
-            <section id="about-hero">
-                <div class="container">
-                    <div class="top">    
-                        <h1>PENTA GRADI SIGURNO, PRECIZNO I ODGOVORNO</h1>
+                <section id="mission-vision">
+                    <div class="container">
                         <div class="left">
-                            <p>Preciznost u radu, iskusni i odgovorni inženjeri i članovi tima, pedantnost u svim fazama rada, poštovanje svih rokova i finansijskih parametara - ukratko PENTA.</p>
-                            <h3 class="company-info">
-                                <span>30</span>
-                                <img src="images/plus.svg" alt="Plus">
-                                <span>zaposlenih</span>
-                                <img src="images/minus.svg" alt="Minus">
-                                <span>3 objekta</span>
-                            </h3>
-                        </div>
-                    </div>
-
-                    <div class="bottom">
-                        <picture>
-                            <source media="(max-width: 500px)" srcset="images/about-hero-mobile.png">
-                            <img src="images/about-hero.png" alt="Penta Ge Co">
-                        </picture>
-                    </div>
-
-                </div>
-            </section>
-
-            <section id="mission-vision">
-                <div class="container">
-
-                    <div class="left">
-                        <h2>Misija i vizija PENTA GE.CO.Construction</h2>
-                        <img src="images/about-random.png" alt="Građevinska Firma">
-                        <p class="name">Antonio Zanetti</p>
-                        <p class="position">CEO & Founder</p>
-                        <img src="images/signature.png" alt="Potpis">
-                    </div>
-
-                    <div class="right">
-                        <div class="fill-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur. Tincidunt ullamcorper risus pretium morbi eget augue. Ullamcorper nec vitae. consequat viverra Pellentesque</p>
-                        </div>
-                        <div class="line"></div>
-                        <div class="fill-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur. Lectus quis orci tristique sapien velit etiam mi. Gravida sed aliquet in leo sed odio pellentesque nisl amet. Morbi ultrices at consequat viverra. Pellentesque imperdiet odio netus eu donec sit amet risus. Ipsum elementum scelerisque ultrices urna faucibus</p>
-                        </div>
-                        <div class="line"></div>
-                        <div class="fill-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur. Lectus quis orci tristique sapien velit etiam mi. </p>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <section id="accordions">
-                <div class="container">
-                    <h2>Društvena <br/> odgovornost</h2>
-
-                    <div class="acc-wrapper">
-
-                        <div class="left">
-
-                            <div class="acc-accordion">
-                                <button class="acc-button">
-                                    <h3>DA NAM BUDE BOLJE</h3>
-                                    <img src="images/arrow-acc.svg" alt="Strelica">
-                                </button>
-                                <div class="acc-hidden">
-                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
-                                </div>
-                            </div>
-                            <div class="acc-accordion">
-                                <button class="acc-button">
-                                    <h3>KORPORATIVNI KODEKS KORPORACIJE</h3>
-                                    <img src="images/arrow-acc.svg" alt="Strelica">
-                                </button>
-                                <div class="acc-hidden">
-                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
-                                </div>
-                            </div>
-                            <div class="acc-accordion">
-                                <button class="acc-button">
-                                    <h3>POLITIKA GRUPACIJE</h3>
-                                    <img src="images/arrow-acc.svg" alt="Strelica">
-                                </button>
-                                <div class="acc-hidden">
-                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
-                                </div>
-                            </div>
-                            <div class="acc-accordion">
-                                <button class="acc-button">
-                                    <h3>PORUKA GRUPACIJE </h3>
-                                    <img src="images/arrow-acc.svg" alt="Strelica">
-                                </button>
-                                <div class="acc-hidden">
-                                    <p>Naša krilatica “Od ideje do realizacije” primenjiva je u svakom aspektu našegrada. Kako bismo ovaj princip osigurali, svakom projektu pristupamo sanajvećom mogućom pažnjom kako bi svaki klijent bio 100% zadovoljantokom svake faze saradnje. Društveni i globalni izazovi postaju sve veći ikompleksniji i naš rad mora obuhvatiti veću meru društvene odgovornosti.</p>
-                                </div>
-                            </div>
-
+                            <h2>KO SMO MI?</h2>
+                            <img src="images/about-random.png" alt="Građevinska Firma" />
+                            <p class="name">Antonio Zanetti</p>
+                            <p class="position">CEO & Founder</p>
+                            <img src="images/signature.png" alt="Potpis" />
                         </div>
 
                         <div class="right">
-                            <img src="images/accordion-right.png" alt="Penta GeCo">
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section id="video">
-                <img class="placeholder" src="images/video-placeholder.jpg" alt="Plceholder">
-                <button class="play-btn">
-                    <img src="images/play-video.svg" alt="Play video">
-                </button>
-            </section>
-
-            <section id="team">
-                <div class="container">
-
-                    <div class="team-txt">
-                        <h2>Niko od nas nije pametan kao svi mi</h2>
-                        <div class="txt">
-                            <img src="images/team-sun.svg" alt="Sunce">
-                            <p>Lorem ipsum dolor sit amet consectetur. In id lacus eget turpis risus urna turpis enim. Justo fermenm vitae viverra in lectus sed</p>
-                        </div>
-                    </div>
-
-                    <div class="team-grid">
-                        <div class="team-card">
-                            <img src="images/team/team1.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="images/team/team2.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="images/team/team3.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="images/team/team1.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="images/team/team2.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="images/team/team3.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="images/team/team1.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="images/team/team2.jpg" alt="Tim">
-                            <p>Miloš Prokić</p>
-                            <p class="title">Chief executive officer</p>
+                            <div class="fill-txt">
+                                <p>
+                                    Mi smo PENTA Ge.Co. Construction - građevinsko preduzeće koje se
+                                    ponosi svojim nasleđem kvaliteta, integriteta i stručnosti. Sa
+                                    fokusom na preciznost, efikasnost i održivost, gradimo
+                                    kompleksne industrijske objekte, sofisticirane stambene i
+                                    poslovne strukture, postavljajući standarde u građevinskoj
+                                    industriji.
+                                </p>
+                            </div>
+                            <div class="line"></div>
+                            <div class="fill-txt">
+                                <p>
+                                    Posvećeni smo održivom razvoju i društvenoj odgovornosti i
+                                    aktivno radimo na unapređenju ekoloških praksi u našim
+                                    projektima. Naš tim iskusnih inženjera i arhitekata predan je
+                                    ostvarenju vaših građevinskih ciljeva, postavljajući nove
+                                    standarde u građevinskoj industriji. Mi smo PENTA - vaš pouzdan
+                                    partner u građevinarstvu.
+                                </p>
+                            </div>
                         </div>
                     </div>
+                </section>
 
-                </div>
-            </section>
+                <section id="accordions">
+                    <div class="container">
+                        <h2>
+                            Društvena <br />
+                            odgovornost
+                        </h2>
 
-            <!-- <section id="licences">
+                        <div class="acc-wrapper">
+                            <div class="left">
+                                <div class="acc-accordion">
+                                    <button class="acc-button">
+                                        <h3>DA NAM BUDE BOLJE</h3>
+                                        <img src="images/arrow-acc.svg" alt="Strelica" />
+                                    </button>
+                                    <div class="acc-hidden">
+                                        <p>
+                                            Naša krilatica “Od ideje do realizacije” primenjiva je u
+                                            svakom aspektu našegrada. Kako bismo ovaj princip
+                                            osigurali, svakom projektu pristupamo sanajvećom mogućom
+                                            pažnjom kako bi svaki klijent bio 100% zadovoljantokom
+                                            svake faze saradnje. Društveni i globalni izazovi
+                                            postaju sve veći ikompleksniji i naš rad mora obuhvatiti
+                                            veću meru društvene odgovornosti.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="acc-accordion">
+                                    <button class="acc-button">
+                                        <h3>KORPORATIVNI KODEKS KORPORACIJE</h3>
+                                        <img src="images/arrow-acc.svg" alt="Strelica" />
+                                    </button>
+                                    <div class="acc-hidden">
+                                        <p>
+                                            Naša krilatica “Od ideje do realizacije” primenjiva je u
+                                            svakom aspektu našegrada. Kako bismo ovaj princip
+                                            osigurali, svakom projektu pristupamo sanajvećom mogućom
+                                            pažnjom kako bi svaki klijent bio 100% zadovoljantokom
+                                            svake faze saradnje. Društveni i globalni izazovi
+                                            postaju sve veći ikompleksniji i naš rad mora obuhvatiti
+                                            veću meru društvene odgovornosti.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="acc-accordion">
+                                    <button class="acc-button">
+                                        <h3>POLITIKA GRUPACIJE</h3>
+                                        <img src="images/arrow-acc.svg" alt="Strelica" />
+                                    </button>
+                                    <div class="acc-hidden">
+                                        <p>
+                                            Naša krilatica “Od ideje do realizacije” primenjiva je u
+                                            svakom aspektu našegrada. Kako bismo ovaj princip
+                                            osigurali, svakom projektu pristupamo sanajvećom mogućom
+                                            pažnjom kako bi svaki klijent bio 100% zadovoljantokom
+                                            svake faze saradnje. Društveni i globalni izazovi
+                                            postaju sve veći ikompleksniji i naš rad mora obuhvatiti
+                                            veću meru društvene odgovornosti.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="acc-accordion">
+                                    <button class="acc-button">
+                                        <h3>PORUKA GRUPACIJE</h3>
+                                        <img src="images/arrow-acc.svg" alt="Strelica" />
+                                    </button>
+                                    <div class="acc-hidden">
+                                        <p>
+                                            Naša krilatica “Od ideje do realizacije” primenjiva je u
+                                            svakom aspektu našegrada. Kako bismo ovaj princip
+                                            osigurali, svakom projektu pristupamo sanajvećom mogućom
+                                            pažnjom kako bi svaki klijent bio 100% zadovoljantokom
+                                            svake faze saradnje. Društveni i globalni izazovi
+                                            postaju sve veći ikompleksniji i naš rad mora obuhvatiti
+                                            veću meru društvene odgovornosti.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="right">
+                                <img src="images/accordion-right.png" alt="Penta GeCo" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="video">
+                    <img class="placeholder" src="images/video-placeholder.jpg" alt="Plceholder" />
+                    <button class="play-btn">
+                        <img src="images/play-video.svg" alt="Play video" />
+                    </button>
+                </section>
+
+                <section id="team">
+                    <div class="container">
+                        <div class="team-txt">
+                            <h2>LJUDI SU NAŠA NAJVEĆA VREDNOST</h2>
+                            <div class="txt">
+                                <img src="images/team-sun.svg" alt="Sunce" />
+                                <p>Ljudi čine našu kompaniju i oni su temelj našeg uspeha!</p>
+                            </div>
+                        </div>
+
+                        <div class="team-grid">
+                            <div class="team-card">
+                                <img src="images/team/team1.jpg" alt="Tim" />
+                                <p>Antonio Zanetti</p>
+                                <p class="title">Osnivač i generalni direktor</p>
+                            </div>
+                            <div class="team-card">
+                                <img src="images/team/team2.jpg" alt="Tim" />
+                                <p>Miloš Prokić</p>
+                                <p class="title">Izvršni direktor</p>
+                            </div>
+                            <div class="team-card">
+                                <img src="images/team/team3.jpg" alt="Tim" />
+                                <p>Ljubomir Đurović</p>
+                                <p class="title">Finansijski direktor</p>
+                            </div>
+                            <div class="team-card">
+                                <img src="images/team/team1.jpg" alt="Tim" />
+                                <p>Dragan Dutina</p>
+                                <p class="title">Tehnički direktor</p>
+                            </div>
+                            <div class="team-card">
+                                <img src="images/team/team3.jpg" alt="Tim" />
+                                <p>Marija Kamenarac</p>
+                                <p class="title">Rukovodilac administrativnih poslova</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- <section id="licences">
                 <div class="container">
                     <h2 class="text-center">Licence i standardi</h2>
 
@@ -254,150 +298,153 @@
 
                 </div>
             </section> -->
+            </main>
 
+            <footer>
+                <section id="idea">
+                    <div class="container">
+                        <div class="idea-wrapper">
+                            <h2 class="jumbo text-center">IMATE IDEJU ZA VAŠ NOVI PROJEKAT?</h2>
+                            <div class="btn-wrapper">
+                                <a href="#" class="btn">
+                                    <span>KONTAKTIRAJTE NAS</span>
+                                </a>
+                                <a href="#" class="btn btn-secondary" download>
+                                    <span>PREUZMITE PDF</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        </main>
-
-
-        <footer>
-
-            <section id="idea">
-                <div class="container">
-                    <div class="idea-wrapper">
-
-                        <h2 class="jumbo text-center">IMATE IDEJU ZA VAŠ NOVI PROJEKAT?</h2>
-                        <div class="btn-wrapper">
-                            <a href="#" class="btn">
-                                <span>KONTAKTIRAJTE NAS</span>
+                <section id="contact-info">
+                    <div class="container">
+                        <div class="left">
+                            <a href="#">
+                                <img src="images/contact-footer.svg" alt="Kontakt" />
+                                <h3>
+                                    <span>Kontakt</span>
+                                    <img src="images/arrow-footer.svg" alt="Strelica" />
+                                </h3>
                             </a>
-                            <a href="#" class="btn btn-secondary" download>
-                                <span>PREUZMITE PDF</span>
+                            <a href="#">
+                                <img src="images/yt-footer.svg" alt="YouTube" />
+                                <h3>
+                                    <span>YouTube</span>
+                                    <img src="images/arrow-footer.svg" alt="Strelica" />
+                                </h3>
+                            </a>
+                            <a href="#">
+                                <img src="images/linkedin-footer.svg" alt="Kontakt" />
+                                <h3>
+                                    <span>LinkedIn</span>
+                                    <img src="images/arrow-footer.svg" alt="Strelica" />
+                                </h3>
+                            </a>
+                            <a href="#">
+                                <img src="images/fb-footer.svg" alt="Kontakt" />
+                                <h3>
+                                    <span>Facebook</span>
+                                    <img src="images/arrow-footer.svg" alt="Strelica" />
+                                </h3>
                             </a>
                         </div>
 
-                    </div>
-                </div>
-            </section>
-
-            <section id="contact-info">
-                <div class="container">
-
-                    <div class="left">
-
-                        <a href="#">
-                            <img src="images/contact-footer.svg" alt="Kontakt">
-                            <h3>
-                                <span>Kontakt</span>
-                                <img src="images/arrow-footer.svg" alt="Strelica">
-                            </h3>
-                        </a>
-                        <a href="#">
-                            <img src="images/yt-footer.svg" alt="YouTube">
-                            <h3>
-                                <span>YouTube</span>
-                                <img src="images/arrow-footer.svg" alt="Strelica">
-                            </h3>
-                        </a>
-                        <a href="#">
-                            <img src="images/linkedin-footer.svg" alt="Kontakt">
-                            <h3>
-                                <span>LinkedIn</span>
-                                <img src="images/arrow-footer.svg" alt="Strelica">
-                            </h3>
-                        </a>
-                        <a href="#">
-                            <img src="images/fb-footer.svg" alt="Kontakt">
-                            <h3>
-                                <span>Facebook</span>
-                                <img src="images/arrow-footer.svg" alt="Strelica">
-                            </h3>
-                        </a>
-
-                    </div>
-
-                    <div class="right">
-                        <h2>KONTAKT INFORMACIJE</h2>
-                        <div class="c-info ">
-                            <a href="tel:+381631234532">+381 (0)63 12 34 532</a>
-                            <a href="#" target="_blank">Pivljanina Baja 9<br/>11000 Belgrade, Serbia</a>
-                            <a href="mailto:office@pentageco.rs">office@pentageco.rs</a>
-                        </div>
-                        <div class="c-info c-align-right">
-                            <a href="tel:+381631234532">+381 (0)63 12 34 532</a>
-                            <a href="#" target="_blank">Pivljanina Baja 9<br/>11000 Belgrade, Serbia</a>
-                            <a href="mailto:office@pentageco.rs">office@pentageco.rs</a>
-                        </div>
-                        <div class="c-info">
-                            <a href="tel:+381631234532">+381 (0)63 12 34 532</a>
-                            <a href="#" target="_blank">Pivljanina Baja 9<br/>11000 Belgrade, Serbia</a>
-                            <a href="mailto:office@pentageco.rs">office@pentageco.rs</a>
+                        <div class="right">
+                            <h2>KONTAKT INFORMACIJE</h2>
+                            <div class="c-info">
+                                <a href="tel:+381631234532">+381 (0)63 12 34 532</a>
+                                <a href="#" target="_blank"
+                                    >Pivljanina Baja 9<br />11000 Belgrade, Serbia</a
+                                >
+                                <a href="mailto:office@pentageco.rs">office@pentageco.rs</a>
+                            </div>
+                            <div class="c-info c-align-right">
+                                <a href="tel:+381631234532">+381 (0)63 12 34 532</a>
+                                <a href="#" target="_blank"
+                                    >Pivljanina Baja 9<br />11000 Belgrade, Serbia</a
+                                >
+                                <a href="mailto:office@pentageco.rs">office@pentageco.rs</a>
+                            </div>
+                            <div class="c-info">
+                                <a href="tel:+381631234532">+381 (0)63 12 34 532</a>
+                                <a href="#" target="_blank"
+                                    >Pivljanina Baja 9<br />11000 Belgrade, Serbia</a
+                                >
+                                <a href="mailto:office@pentageco.rs">office@pentageco.rs</a>
+                            </div>
                         </div>
                     </div>
+                </section>
 
-                </div>
-            </section>
+                <section id="copy">
+                    <div class="container">
+                        <a href="#">Privacy Policy</a>
+                        <p>2024 Penta Ge.Co. Construction d.o.o.</p>
+                        <a href="#">Cookie Policy</a>
+                    </div>
+                </section>
+            </footer>
+        </div>
+        <!-- scroll-wrapper -->
 
-            <section id="copy">
-                <div class="container">
-                    <a href="#">Privacy Policy</a>
-                    <p>2024 Penta Ge.Co. Construction d.o.o.</p>
-                    <a href="#">Cookie Policy</a>
-                </div>
-            </section>
+        <script>
+            // ACCORDION
+            const accordionContainer = document.querySelectorAll('.acc-accordion')
+            const accordionButton = document.querySelectorAll('.acc-button')
+            const accordionHidden = document.querySelectorAll('.acc-hidden')
+            if (accordionButton) {
+                accordionButton.forEach((accordion) => {
+                    const parent = accordion.parentElement
+                    const hidden = accordion.nextElementSibling
 
-        </footer>
-
-
-    </div><!-- scroll-wrapper -->
-
-
-    <script>
-        // ACCORDION
-        const accordionContainer = document.querySelectorAll('.acc-accordion')
-        const accordionButton = document.querySelectorAll('.acc-button')
-        const accordionHidden = document.querySelectorAll('.acc-hidden')
-        if (accordionButton) {
-            accordionButton.forEach(accordion => {
-                const parent = accordion.parentElement
-                const hidden = accordion.nextElementSibling
-
-                if(parent.classList.contains('active')){
-                    console.log('ima');
-                    hidden.style.maxHeight = hidden.scrollHeight + 'px'
-                    accordion.classList.add('active')
-                    parent.classList.add('active')
-                }
-
-                accordion.addEventListener('click', () => {
-                    if (hidden.style.maxHeight) {
-                        hidden.style.maxHeight = null
-                        parent.classList.remove('active')
-                        accordion.classList.remove('active')
-                    } else {
-                        accordionHidden.forEach(hiddenBefore => {
-                            hiddenBefore.style.maxHeight = null
-                        })
-                        accordionButton.forEach(el => {
-                            el.classList.remove('active')
-                        })
-                        accordionContainer.forEach(el => {
-                            el.classList.remove('active')
-                        })
+                    if (parent.classList.contains('active')) {
+                        console.log('ima')
                         hidden.style.maxHeight = hidden.scrollHeight + 'px'
                         accordion.classList.add('active')
                         parent.classList.add('active')
                     }
+
+                    accordion.addEventListener('click', () => {
+                        if (hidden.style.maxHeight) {
+                            hidden.style.maxHeight = null
+                            parent.classList.remove('active')
+                            accordion.classList.remove('active')
+                        } else {
+                            accordionHidden.forEach((hiddenBefore) => {
+                                hiddenBefore.style.maxHeight = null
+                            })
+                            accordionButton.forEach((el) => {
+                                el.classList.remove('active')
+                            })
+                            accordionContainer.forEach((el) => {
+                                el.classList.remove('active')
+                            })
+                            hidden.style.maxHeight = hidden.scrollHeight + 'px'
+                            accordion.classList.add('active')
+                            parent.classList.add('active')
+                        }
+                    })
                 })
-            })
-        }
-    </script>
+            }
+        </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script type="module" src="js/ScrollSmoother.min.js"></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+            integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script type="module" src="js/ScrollSmoother.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script type="module" src="js/app.js"></script>
-</body>
+        <script type="module" src="js/app.js"></script>
+    </body>
 </html>
